@@ -15,6 +15,7 @@ export const amazonSearchUrl = (query: string) =>
 export const nav = [
   { href: '/gear/', label: 'Gear' },
   { href: '/best/', label: 'Best Picks' },
+  { href: '/compare/', label: 'Compare' },
   { href: '/guides/', label: 'Guides' },
   { href: '/drills/', label: 'Drills' },
   { href: '/community/', label: 'Community' },
