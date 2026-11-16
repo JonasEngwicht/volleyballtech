@@ -11,6 +11,8 @@ published: 2026-11-16
 
 Good defenders are not the ones who dive the most. They are the ones who get to the ball on their feet. This drill trains the low, quick shuffle that makes that possible.
 
+![Top-down view of a player shuffling sideways between two markers about ten feet apart](/diagrams/defensive-shuffle.svg)
+
 ## What you need
 
 - About ten feet of floor

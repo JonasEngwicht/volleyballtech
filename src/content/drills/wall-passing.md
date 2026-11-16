@@ -11,6 +11,8 @@ published: 2026-11-16
 
 Passing is the skill every rally starts with, and you can practice it alone. A wall returns the ball the same way every time, which makes it the most patient training partner you will ever have.
 
+![Side view of a player passing a ball against a wall from six to eight feet away, aiming at a target above net height](/diagrams/wall-passing.svg)
+
 ## What you need
 
 - A volleyball

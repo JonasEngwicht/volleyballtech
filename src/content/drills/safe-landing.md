@@ -13,6 +13,8 @@ Players practice jumping all the time and landing almost never. A few minutes of
 
 This drill is general advice. If you have knee or ankle problems, check with a doctor or physical therapist first.
 
+![Front view of two landings: knees over toes (correct) and knees caving inward (wrong)](/diagrams/safe-landing.svg)
+
 ## What a good landing looks like
 
 - **Two feet** touch down at nearly the same time

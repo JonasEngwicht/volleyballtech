@@ -11,6 +11,8 @@ published: 2026-11-16
 
 A serve that lands in is worth more than a hard serve that sails out. This drill trains accuracy first.
 
+![Court diagram showing the six serving zones on the receiving side of the net](/diagrams/serving-targets.svg)
+
 ## What you need
 
 - A court and net

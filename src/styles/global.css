@@ -537,6 +537,15 @@ a.card:hover {
   margin: 0.3em 0;
 }
 
+.prose img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0.4em 0 1.6em;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
 .prose table {
   width: 100%;
   border-collapse: collapse;

@@ -11,6 +11,8 @@ published: 2026-11-16
 
 Clean setting comes from hundreds of repetitions with the right hand shape. A wall lets you get those repetitions in minutes.
 
+![Side view of a player setting a ball against a wall from two to three feet away, with hands above the forehead](/diagrams/wall-setting.svg)
+
 ## What you need
 
 - A volleyball

@@ -13,6 +13,8 @@ A good spike starts with your feet. This drill teaches the rhythm of the four-st
 
 The steps below are for right-handed hitters. If you hit left-handed, mirror everything.
 
+![Diagram of the four-step approach seen from above: right, left, right, left, then jump at the net](/diagrams/approach-footwork.svg)
+
 ## What you need
 
 - A few yards of open floor with good grip
