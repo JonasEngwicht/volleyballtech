@@ -75,4 +75,4 @@ Simpler training gear often gives more value for individuals: a rebounder net, a
 
 Technology measures your game. It does not train it. The numbers only help if they change what you do in practice.
 
-We will add product pages to the [volleyball tech category](/gear/tech/) as we research them.
+See our [best volleyball tech](/best/best-volleyball-tech/) picks and the full [volleyball tech category](/gear/tech/).

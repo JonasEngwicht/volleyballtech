@@ -13,6 +13,7 @@ export function getStaticPaths() {
 }
 
 const { category } = Astro.props;
+const sentence = (t: string) => t.charAt(0).toUpperCase() + t.slice(1).toLowerCase();
 const products = await getProducts(category.id);
 const articles = (await getArticles()).filter((a) => a.data.category === category.id);
 ---
@@ -28,7 +29,7 @@ const articles = (await getArticles()).filter((a) => a.data.category === categor
   />
   <section class="section">
     <div class="container">
-      <h2>{category.name === 'Volleyball Shoes' ? 'Volleyball shoes we cover' : `${category.name} we cover`}</h2>
+      <h2>{`${sentence(category.name)} we cover`}</h2>
       {
         products.length > 0 ? (
           <div class="grid">
@@ -55,7 +56,7 @@ const articles = (await getArticles()).filter((a) => a.data.category === categor
     articles.length > 0 && (
       <section class="section section-alt">
         <div class="container">
-          <h2>{category.name} guides and comparisons</h2>
+          <h2>{sentence(category.name)} guides and comparisons</h2>
           <div class="grid">
             {articles.map((a) => (
               <ArticleCard article={a} />
