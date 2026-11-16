@@ -1,4 +1,23 @@
+# Search engines and everyone else: welcome.
 User-agent: *
 Allow: /
+
+# AI training crawlers: please do not use this site's content for model training.
+# (AI search crawlers such as OAI-SearchBot, PerplexityBot and Claude-SearchBot stay allowed.)
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: Meta-ExternalAgent
+User-agent: FacebookBot
+User-agent: Amazonbot
+User-agent: cohere-ai
+User-agent: Diffbot
+User-agent: omgili
+User-agent: ImagesiftBot
+Disallow: /
 
 Sitemap: https://volleyballtech.com/sitemap.xml
