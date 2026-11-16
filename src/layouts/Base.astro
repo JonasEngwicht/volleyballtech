@@ -1,0 +1,96 @@
+---
+import '../styles/global.css';
+import { site, nav } from '../data/site';
+
+interface Props {
+  title: string;
+  description: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const { title, description, type = 'website', noindex = false, jsonLd } = Astro.props;
+const canonical = new URL(Astro.url.pathname, site.url).href;
+const fullTitle = title === site.name ? `${site.name} – ${site.tagline}` : `${title} | ${site.name}`;
+const path = Astro.url.pathname;
+const isActive = (href: string) => path === href || path.startsWith(href);
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap.xml" />
+    <meta name="theme-color" content="#0f1f3d" />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={site.name} />
+    <meta name="twitter:card" content="summary" />
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="/" aria-label={`${site.name} home`}>
+          <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="16" cy="16" r="14" fill="#ffc627" stroke="#fff" stroke-width="2"></circle>
+            <path d="M16 2c-3 6-3 14 2 20M5 9c6 0 13 3 17 9M27 9c-4 5-11 9-19 9" fill="none" stroke="#0f1f3d" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
+          <span class="logo-text">Volleyball<span>Tech</span></span>
+        </a>
+        <nav class="main-nav" aria-label="Main">
+          <ul>
+            {
+              nav.map((item) => (
+                <li>
+                  <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>
+                    {item.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <p class="logo-text">Volleyball<span>Tech</span></p>
+            <p>{site.tagline}. Independent reviews, comparisons and training tips for players and coaches.</p>
+          </div>
+          <ul class="footer-links">
+            <li><a href="/about/">About</a></li>
+            <li><a href="/community/">Community</a></li>
+            <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/legal-notice/">Legal Notice</a></li>
+          </ul>
+        </div>
+        <p class="footer-disclosure">
+          Some links on this site are affiliate links. If you buy through them, we may earn a commission at no
+          extra cost to you. It never decides which products we recommend.
+          <a href="/affiliate-disclosure/">Learn more</a>.
+        </p>
+        <p class="footer-copy">© {year} {site.name}</p>
+      </div>
+    </footer>
+  </body>
+</html>

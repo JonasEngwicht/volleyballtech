@@ -1,0 +1,29 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import { categories } from '../../data/site';
+import { getProducts } from '../../lib/content';
+
+const products = await getProducts();
+const count = (id: string) => products.filter((p) => p.data.category === id).length;
+const description = 'The VolleyballTech gear directory: shoes, knee pads, balls, training equipment and tech, organized by position, level and budget.';
+---
+
+<Base title="Volleyball Gear Directory" description={description}>
+  <PageHead title="Gear Directory" lead={description} crumbs={[{ href: '/gear/', label: 'Gear' }]} />
+  <section class="section">
+    <div class="container">
+      <div class="grid">
+        {
+          categories.map((c) => (
+            <a class="card" href={`/gear/${c.id}/`}>
+              <span class="badge badge-accent">{count(c.id) > 0 ? `${count(c.id)} products` : 'Coming soon'}</span>
+              <h3>{c.name}</h3>
+              <p>{c.blurb}</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>

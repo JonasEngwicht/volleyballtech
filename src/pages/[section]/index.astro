@@ -1,0 +1,41 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { sections } from '../../data/site';
+import { getArticles } from '../../lib/content';
+
+export function getStaticPaths() {
+  return sections.map((section) => ({
+    params: { section: section.id },
+    props: { section },
+  }));
+}
+
+const { section } = Astro.props;
+const articles = await getArticles(section.id);
+---
+
+<Base title={`Volleyball ${section.title}`} description={section.description}>
+  <PageHead title={section.title} lead={section.description} crumbs={[{ href: `/${section.id}/`, label: section.title }]} />
+  <section class="section">
+    <div class="container">
+      {
+        articles.length > 0 ? (
+          <div class="grid">
+            {articles.map((a) => (
+              <ArticleCard article={a} />
+            ))}
+          </div>
+        ) : (
+          <div class="empty">
+            <p>We're working on the first articles in this section.</p>
+            <p>
+              In the meantime, take a look at our <a href="/guides/">guides</a>.
+            </p>
+          </div>
+        )
+      }
+    </div>
+  </section>
+</Base>

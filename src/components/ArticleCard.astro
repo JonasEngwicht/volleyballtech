@@ -1,0 +1,17 @@
+---
+import type { Article } from '../lib/content';
+import { articleUrl, formatDate, sectionLabel } from '../lib/content';
+
+interface Props {
+  article: Article;
+}
+
+const { article } = Astro.props;
+---
+
+<a class="card" href={articleUrl(article)}>
+  <span class="badge">{sectionLabel(article.data.section)}</span>
+  <h3>{article.data.title}</h3>
+  <p>{article.data.description}</p>
+  <p class="meta">Updated {formatDate(article.data.updated ?? article.data.published)}</p>
+</a>

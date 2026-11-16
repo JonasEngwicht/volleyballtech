@@ -1,0 +1,23 @@
+---
+import Base from './Base.astro';
+import PageHead from '../components/PageHead.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  noindex?: boolean;
+}
+
+const { title, description, noindex = false } = Astro.props;
+---
+
+<Base title={title} description={description} noindex={noindex}>
+  <PageHead title={title} lead={description} />
+  <section class="section">
+    <div class="container">
+      <div class="prose">
+        <slot />
+      </div>
+    </div>
+  </section>
+</Base>

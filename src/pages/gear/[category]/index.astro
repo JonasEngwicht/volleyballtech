@@ -1,0 +1,68 @@
+---
+import Base from '../../../layouts/Base.astro';
+import PageHead from '../../../components/PageHead.astro';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import { categories } from '../../../data/site';
+import { getProducts, getArticles, productUrl } from '../../../lib/content';
+
+export function getStaticPaths() {
+  return categories.map((category) => ({
+    params: { category: category.id },
+    props: { category },
+  }));
+}
+
+const { category } = Astro.props;
+const products = await getProducts(category.id);
+const articles = (await getArticles()).filter((a) => a.data.category === category.id);
+---
+
+<Base title={category.name} description={category.blurb}>
+  <PageHead
+    title={category.name}
+    lead={category.blurb}
+    crumbs={[
+      { href: '/gear/', label: 'Gear' },
+      { href: `/gear/${category.id}/`, label: category.name },
+    ]}
+  />
+  <section class="section">
+    <div class="container">
+      <h2>Products</h2>
+      {
+        products.length > 0 ? (
+          <div class="grid">
+            {products.map((p) => (
+              <a class="card" href={productUrl(p)}>
+                <span class="badge">{p.data.brand}</span>
+                {p.data.testedHandsOn && <span class="badge badge-accent">Hands-on</span>}
+                <h3>{p.data.name}</h3>
+                <p>{p.data.summary}</p>
+                {p.data.priceRange && <p class="meta">Price range: {p.data.priceRange}</p>}
+              </a>
+            ))}
+          </div>
+        ) : (
+          <div class="empty">
+            <p>We're still researching and comparing products for this category.</p>
+            <p>Product pages will appear here soon.</p>
+          </div>
+        )
+      }
+    </div>
+  </section>
+  {
+    articles.length > 0 && (
+      <section class="section section-alt">
+        <div class="container">
+          <h2>Guides for {category.name.toLowerCase()}</h2>
+          <div class="grid">
+            {articles.map((a) => (
+              <ArticleCard article={a} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+</Base>

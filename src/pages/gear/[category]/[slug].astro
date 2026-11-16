@@ -1,0 +1,115 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import PageHead from '../../../components/PageHead.astro';
+import { categories } from '../../../data/site';
+
+export async function getStaticPaths() {
+  const products = await getCollection('products', ({ data }) => !data.draft);
+  return products.map((entry) => ({
+    params: { category: entry.data.category, slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const p = entry.data;
+const { Content } = await render(entry);
+const category = categories.find((c) => c.id === p.category) ?? categories[0];
+const specs = Object.entries(p.specs);
+---
+
+<Base title={`${p.name} – Specs, Pros & Cons`} description={p.summary}>
+  <PageHead
+    title={p.name}
+    lead={p.summary}
+    crumbs={[
+      { href: '/gear/', label: 'Gear' },
+      { href: `/gear/${category.id}/`, label: category.name },
+    ]}
+  >
+    {
+      p.bestFor.length > 0 && (
+        <ul class="chips" aria-label="Best for">
+          {p.bestFor.map((b) => (
+            <li>{b}</li>
+          ))}
+        </ul>
+      )
+    }
+  </PageHead>
+
+  <section class="section">
+    <div class="container product-hero">
+      <div class="prose">
+        <p class="notice">
+          {
+            p.testedHandsOn
+              ? 'We have used this product ourselves.'
+              : 'We have not tested this product hands-on yet. This page is based on manufacturer specs and research.'
+          }
+          {' '}Links may be affiliate links. <a href="/affiliate-disclosure/">How we make money</a>
+        </p>
+
+        {
+          specs.length > 0 && (
+            <>
+              <h2>Specs</h2>
+              <table class="specs">
+                <tbody>
+                  {specs.map(([key, value]) => (
+                    <tr>
+                      <th scope="row">{key}</th>
+                      <td>{value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </>
+          )
+        }
+
+        {
+          (p.pros.length > 0 || p.cons.length > 0) && (
+            <div class="pros-cons">
+              <div class="card pros">
+                <h3>What we like</h3>
+                <ul>
+                  {p.pros.map((x) => (
+                    <li>{x}</li>
+                  ))}
+                </ul>
+              </div>
+              <div class="card cons">
+                <h3>What to consider</h3>
+                <ul>
+                  {p.cons.map((x) => (
+                    <li>{x}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          )
+        }
+
+        <Content />
+      </div>
+
+      <aside class="buy-box">
+        <span class="badge">{p.brand}</span>
+        <h2 style="font-size:1.2rem;margin:8px 0 4px">{p.name}</h2>
+        {p.priceRange && <p class="meta">Price range: {p.priceRange}</p>}
+        {
+          p.affiliateUrl && (
+            <>
+              <a class="btn btn-primary" href={p.affiliateUrl} rel="sponsored nofollow noopener" target="_blank">
+                Check price{p.retailer ? ` at ${p.retailer}` : ''}
+              </a>
+              <p class="small">Affiliate link – we may earn a commission.</p>
+            </>
+          )
+        }
+      </aside>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import { skillLabels } from '../../data/site';
+import { getDrills, drillUrl } from '../../lib/content';
+
+const drills = await getDrills();
+const description = 'Volleyball drills for solo, partner and team practice — each one with clear steps and the equipment you need.';
+---
+
+<Base title="Volleyball Drills" description={description}>
+  <PageHead title="Drill Library" lead={description} crumbs={[{ href: '/drills/', label: 'Drills' }]} />
+  <section class="section">
+    <div class="container">
+      {
+        drills.length > 0 ? (
+          <div class="grid">
+            {drills.map((d) => (
+              <a class="card" href={drillUrl(d)}>
+                <span class="badge">{skillLabels[d.data.skill]}</span>
+                <h3>{d.data.title}</h3>
+                <p>{d.data.description}</p>
+                <p class="meta">
+                  {d.data.level} · {d.data.players} · {d.data.duration}
+                </p>
+              </a>
+            ))}
+          </div>
+        ) : (
+          <div class="empty">
+            <p>The drill library is coming soon.</p>
+          </div>
+        )
+      }
+    </div>
+  </section>
+</Base>

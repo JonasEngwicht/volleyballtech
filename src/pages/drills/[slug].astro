@@ -1,0 +1,48 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import { categories, skillLabels } from '../../data/site';
+
+export async function getStaticPaths() {
+  const drills = await getCollection('drills', ({ data }) => !data.draft);
+  return drills.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+const equipment = d.equipment.map((id) => categories.find((c) => c.id === id)).filter((c) => c !== undefined);
+---
+
+<Base title={d.title} description={d.description} type="article">
+  <PageHead title={d.title} lead={d.description} crumbs={[{ href: '/drills/', label: 'Drills' }]}>
+    <ul class="facts">
+      <li><strong>Skill:</strong> {skillLabels[d.skill]}</li>
+      <li><strong>Level:</strong> {d.level}</li>
+      <li><strong>Players:</strong> {d.players}</li>
+      <li><strong>Time:</strong> {d.duration}</li>
+    </ul>
+  </PageHead>
+  <section class="section">
+    <div class="container">
+      <article class="prose">
+        <Content />
+        {
+          equipment.length > 0 && (
+            <>
+              <h2>Gear for this drill</h2>
+              <ul>
+                {equipment.map((c) => (
+                  <li>
+                    <a href={`/gear/${c.id}/`}>{c.name}</a>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )
+        }
+      </article>
+    </div>
+  </section>
+</Base>
