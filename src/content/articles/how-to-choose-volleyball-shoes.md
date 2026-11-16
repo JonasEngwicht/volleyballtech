@@ -20,7 +20,7 @@ If you play once in a while, any clean indoor court shoe will get you through. O
 
 Running shoes are the one thing to avoid. Their tall, soft heels and forward-rolling shape make side-to-side moves less stable.
 
-## The four things that matter
+## What matters in a volleyball shoe
 
 ### 1. Grip
 
@@ -52,7 +52,7 @@ A perfect shoe in the wrong size is a bad shoe.
 
 Lighter shoes feel quicker. Heavier shoes often bring more cushioning and support. Neither is better; it is a trade-off.
 
-## What to look for by position
+## Volleyball shoes by position
 
 | Position | What matters most | Why |
 | --- | --- | --- |
@@ -63,7 +63,7 @@ Lighter shoes feel quicker. Heavier shoes often bring more cushioning and suppor
 
 If you play more than one position – and most recreational players do – pick a balanced all-around shoe rather than a specialist model.
 
-## How much should you spend?
+## How much should you spend on volleyball shoes?
 
 - **Entry level:** Solid grip and basic cushioning. A good choice if you play once or twice a week or your feet are still growing.
 - **Mid-range:** Better cushioning and a more secure upper. This is the sweet spot for most club and school players.
@@ -71,7 +71,7 @@ If you play more than one position – and most recreational players do – pick
 
 A simple way to save money: last season's model of a good shoe is often heavily discounted and nearly identical to the new one.
 
-## When to replace your shoes
+## When to replace your volleyball shoes
 
 Replace them when you notice any of these:
 
@@ -81,7 +81,7 @@ Replace them when you notice any of these:
 
 How long that takes depends on how often you play, your weight and the floor. Players who train several times a week often need a new pair every season.
 
-## Quick checklist
+## Volleyball shoe checklist
 
 1. Gum-rubber outsole made for indoor courts
 2. Cushioning that matches how much you jump

@@ -6,11 +6,11 @@ import { getProducts } from '../../lib/content';
 
 const products = await getProducts();
 const count = (id: string) => products.filter((p) => p.data.category === id).length;
-const description = 'The VolleyballTech gear directory: shoes, knee pads, balls, training equipment and tech, organized by position, level and budget.';
+const description = 'The VolleyballTech volleyball gear directory: volleyball shoes, knee pads, balls, training equipment and volleyball tech, organized by position, level and budget.';
 ---
 
-<Base title="Volleyball Gear Directory" description={description}>
-  <PageHead title="Gear Directory" lead={description} crumbs={[{ href: '/gear/', label: 'Gear' }]} />
+<Base title="Volleyball Gear Directory: Shoes, Knee Pads, Balls & Tech" description={description}>
+  <PageHead title="Volleyball Gear Directory" lead={description} crumbs={[{ href: '/gear/', label: 'Gear' }]} />
   <section class="section">
     <div class="container">
       <div class="grid">

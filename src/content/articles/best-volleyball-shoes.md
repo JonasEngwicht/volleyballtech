@@ -11,7 +11,7 @@ There is no single best volleyball shoe. A middle blocker and a libero need diff
 
 **How we chose:** We compared current models from the four big brands using manufacturer specs, retailer data and independent reviews. We have not worn these shoes ourselves, and we say so on every product page. Each pick links to a page with full specs and a "who should skip it" section.
 
-## Quick picks
+## Best volleyball shoes at a glance
 
 | If you are… | Look at | Why |
 | --- | --- | --- |
@@ -65,7 +65,7 @@ The [HyperSet 2](/gear/shoes/nike-hyperset-2/) is the hitter's shoe: an Air Zoom
 
 The [HyperAce 3](/gear/shoes/nike-hyperace-3/) is the lighter, cheaper all-rounder, sold in unisex sizing.
 
-## How to choose between them
+## How to choose the right volleyball shoes
 
 1. **Start with how much you jump.** More jumping means you want more forefoot cushioning.
 2. **Be honest about your level.** Flagship shoes do not make a beginner better.

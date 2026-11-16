@@ -9,7 +9,7 @@ published: 2026-11-16
 
 Short answer: yes, you can play volleyball in basketball shoes, and plenty of players at every level do. Both sports are played on indoor courts and involve jumping and quick cuts. But the shoes are not the same, and the differences matter more for some players than others.
 
-## The main differences
+## Volleyball shoes vs. basketball shoes: the main differences
 
 | | Volleyball shoes | Basketball shoes |
 | --- | --- | --- |

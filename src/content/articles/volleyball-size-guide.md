@@ -9,7 +9,7 @@ published: 2026-11-16
 
 Buying a volleyball sounds simple until you see the options: indoor, beach, "lite", size 5, size 4. This guide explains what the numbers mean and which ball fits which player.
 
-## Official sizes at a glance
+## Official volleyball sizes at a glance
 
 | Ball | Circumference | Weight | Pressure |
 | --- | --- | --- | --- |
@@ -51,7 +51,7 @@ Heavier balls are for short, focused setting work. Do not serve or spike them.
 
 Too much air makes the ball sting. Too little makes it dead. A small pressure gauge costs a few dollars and takes the guesswork out. Wet the needle before you insert it so you do not damage the valve.
 
-## What should you buy?
+## Which volleyball should you buy?
 
 - **For a child starting out:** One lighter youth ball.
 - **For practice at home:** The same model your team plays with, so the feel matches.

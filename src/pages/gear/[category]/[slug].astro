@@ -21,7 +21,7 @@ const buyUrl = p.affiliateUrl ?? (p.amazon ? amazonSearchUrl(p.amazonQuery ?? p.
 const buyLabel = p.affiliateUrl ? `Check price${p.retailer ? ` at ${p.retailer}` : ''}` : 'Check price on Amazon';
 ---
 
-<Base title={`${p.name} – Specs, Pros & Cons`} description={p.summary}>
+<Base title={`${p.name}${p.category === 'shoes' ? ' Volleyball Shoes' : ''}: Specs, Pros & Cons`} description={p.summary}>
   <PageHead
     title={p.name}
     lead={p.summary}
@@ -56,7 +56,7 @@ const buyLabel = p.affiliateUrl ? `Check price${p.retailer ? ` at ${p.retailer}`
         {
           specs.length > 0 && (
             <>
-              <h2>Specs</h2>
+              <h2>{p.name} specs</h2>
               <table class="specs">
                 <tbody>
                   {specs.map(([key, value]) => (

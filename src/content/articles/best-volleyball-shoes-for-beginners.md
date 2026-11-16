@@ -17,7 +17,7 @@ Your first volleyball shoes have one job: let you move and land safely on an ind
 - **Cheapest sensible option:** [ASICS Upcourt 6](/gear/shoes/asics-upcourt-6/) – about $65, also in kids' sizes
 - **If you already know you will play a lot:** [Mizuno Wave Momentum 3](/gear/shoes/mizuno-wave-momentum-3/) or [Nike HyperAce 3](/gear/shoes/nike-hyperace-3/)
 
-## What a beginner actually needs
+## What a beginner needs in a volleyball shoe
 
 1. **A non-marking indoor outsole.** This is non-negotiable. It grips the court and most gyms require it.
 2. **A stable base.** You will be learning to shuffle, stop and land. A wide, flat-ish sole forgives clumsy footwork.
@@ -42,7 +42,7 @@ If you can afford the Gel-Rocket, we think the extra cushioning and support are 
 
 If you have joined a club team that trains two or three times a week, buying a mid-range shoe right away can save you from replacing a starter shoe after a few months. The Mizuno Wave Momentum 3 and Nike HyperAce 3 are both reasonable step-ups.
 
-## Mistakes to avoid
+## Mistakes to avoid when buying volleyball shoes
 
 - **Buying running shoes.** They are built to roll forward and are unstable sideways.
 - **Buying the pro model.** Specialist jump shoes reward technique you do not have yet.

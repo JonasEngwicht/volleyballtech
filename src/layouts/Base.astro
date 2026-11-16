@@ -14,7 +14,7 @@ interface Props {
 
 const { title, description, type = 'website', noindex = false, jsonLd } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url).href;
-const fullTitle = title === site.name ? `${site.name} – ${site.tagline}` : `${title} | ${site.name}`;
+const fullTitle = title === site.name ? site.homeTitle : `${title} | ${site.name}`;
 const path = Astro.url.pathname;
 const isActive = (href: string) => path === href || path.startsWith(href);
 const year = new Date().getFullYear();
@@ -77,7 +77,7 @@ const year = new Date().getFullYear();
         <div class="footer-grid">
           <div class="footer-brand">
             <p class="logo-text">Volleyball<span>Tech</span></p>
-            <p>{site.tagline}. Independent reviews, comparisons and training tips for players and coaches.</p>
+            <p>{site.tagline}. Independent volleyball gear reviews, volleyball shoe comparisons and training tips for players and coaches.</p>
           </div>
           <ul class="footer-links">
             <li><a href="/about/">About</a></li>

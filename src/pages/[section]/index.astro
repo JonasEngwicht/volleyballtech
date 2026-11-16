@@ -16,8 +16,8 @@ const { section } = Astro.props;
 const articles = await getArticles(section.id);
 ---
 
-<Base title={`Volleyball ${section.title}`} description={section.description}>
-  <PageHead title={section.title} lead={section.description} crumbs={[{ href: `/${section.id}/`, label: section.title }]} />
+<Base title={section.seoTitle} description={section.description}>
+  <PageHead title={section.h1} lead={section.description} crumbs={[{ href: `/${section.id}/`, label: section.title }]} />
   <section class="section">
     <div class="container">
       {

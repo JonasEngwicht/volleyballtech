@@ -1,9 +1,10 @@
 export const site = {
   name: 'VolleyballTech',
   tagline: 'Volleyball gear, explained',
+  homeTitle: 'VolleyballTech – Volleyball Gear, Shoes & Tech, Explained',
   url: 'https://volleyballtech.com',
   description:
-    'Clear comparisons, real specs and practical training tips for volleyball players — from your first pair of court shoes to jump trackers and ball machines.',
+    'Volleyball gear, explained: honest comparisons of volleyball shoes, knee pads, balls and volleyball tech, plus drills and training tips for players and coaches.',
 };
 
 export const amazonTag = 'volleyballtec-20';
@@ -27,19 +28,25 @@ export const sections = [
     id: 'guides',
     label: 'Guide',
     title: 'Guides',
-    description: 'Buying guides and explainers that help you understand what actually matters before you spend money.',
+    h1: 'Volleyball Guides',
+    seoTitle: 'Volleyball Guides: Gear, Shoes, Training & Basics',
+    description: 'Volleyball buying guides and explainers that help you understand what actually matters before you spend money on gear.',
   },
   {
     id: 'best',
     label: 'Best Picks',
     title: 'Best Picks',
-    description: 'Our shortlists of the best volleyball gear for each position, level and budget.',
+    h1: 'Best Volleyball Gear: Our Picks',
+    seoTitle: 'Best Volleyball Gear: Shoes and Equipment Picks',
+    description: 'Our shortlists of the best volleyball shoes and gear for each position, level and budget.',
   },
   {
     id: 'compare',
     label: 'Comparison',
     title: 'Comparisons',
-    description: 'Head-to-head comparisons of popular volleyball products, spec by spec.',
+    h1: 'Volleyball Gear Comparisons',
+    seoTitle: 'Volleyball Gear Comparisons: Shoes Head to Head',
+    description: 'Head-to-head comparisons of popular volleyball shoes and gear, spec by spec.',
   },
 ] as const;
 
@@ -55,36 +62,60 @@ export const categoryIds = [
   'tech',
 ] as const;
 
-export const categories: { id: (typeof categoryIds)[number]; name: string; blurb: string }[] = [
+export const categories: {
+  id: (typeof categoryIds)[number];
+  name: string;
+  blurb: string;
+  seoTitle: string;
+  intro: string;
+}[] = [
   {
     id: 'shoes',
     name: 'Volleyball Shoes',
     blurb: 'Court shoes for every position — grip, cushioning and lateral support compared.',
+    seoTitle: 'Volleyball Shoes: Specs, Comparisons & Buying Guides',
+    intro:
+      'Volleyball shoes are the most important piece of gear you will buy. On this page you find every volleyball shoe we cover, each with full specs, pros and cons and a clear note on who should skip it. Not sure where to start? Our buying guides below explain grip, cushioning and fit in plain English.',
   },
   {
     id: 'knee-pads',
     name: 'Knee Pads',
     blurb: 'From low-profile sleeves to thick foam pads for defenders who live on the floor.',
+    seoTitle: 'Volleyball Knee Pads: Guides & Comparisons',
+    intro:
+      'Volleyball knee pads protect you from bruises and floor burns when you dive. Here we collect knee pads for every position, from slim sleeves for hitters to thick padding for liberos.',
   },
   {
     id: 'ankle-braces',
     name: 'Ankle Braces',
     blurb: 'Lace-up and hinged braces to protect your ankles at the net.',
+    seoTitle: 'Volleyball Ankle Braces: Guides & Comparisons',
+    intro:
+      'Ankle sprains are the most common volleyball injury, and many players wear ankle braces at the net. This is where we cover lace-up and hinged volleyball ankle braces.',
   },
   {
     id: 'balls',
     name: 'Volleyballs',
     blurb: 'Indoor, beach and training balls — sizes, weights and materials explained.',
+    seoTitle: 'Volleyballs: Indoor, Beach & Training Balls Compared',
+    intro:
+      'Indoor volleyballs, beach volleyballs and lighter youth balls differ in size, weight and pressure. Here we cover volleyballs for every court and age group.',
   },
   {
     id: 'training-equipment',
     name: 'Training Equipment',
     blurb: 'Ball machines, setting targets, rebounders and other gear for solo and team practice.',
+    seoTitle: 'Volleyball Training Equipment: Machines, Targets & Aids',
+    intro:
+      'Volleyball training equipment helps you get more touches in less time. This category covers ball machines, setting targets, rebounders and other training aids for solo and team practice.',
   },
   {
     id: 'tech',
     name: 'Volleyball Tech',
     blurb: 'Jump trackers, video analysis apps, cameras and wearables to measure your progress.',
+    seoTitle: 'Volleyball Tech: Jump Trackers, Apps & Smart Gear',
+    intro:
+      'Volleyball tech covers everything that measures or records your game: jump trackers, video analysis apps, auto-tracking cameras and wearables. Here we explain what the technology does and whether it is worth the money for players and coaches.',
   },
 ];
 

@@ -11,7 +11,7 @@ Let's be honest first: no shoe will make you jump much higher. Your vertical com
 
 **How we chose:** These picks are based on manufacturer specs, retailer data and published reviews. We have not worn them ourselves.
 
-## Quick picks
+## Best volleyball shoes for jumping at a glance
 
 | Shoe | Best for | Key idea |
 | --- | --- | --- |
@@ -21,7 +21,7 @@ Let's be honest first: no shoe will make you jump much higher. Your vertical com
 | [adidas Crazyflight 7](/gear/shoes/adidas-crazyflight-7/) | Jumpers who like a light shoe | Full-length Lightstrike Pro |
 | [Mizuno Wave Momentum 3](/gear/shoes/mizuno-wave-momentum-3/) | Hitters who also play back row | Balanced cushioning and stability |
 
-## What matters in a shoe for jumping
+## What matters in a volleyball shoe for jumping
 
 - **Forefoot cushioning.** You take off and land on the front of your foot.
 - **Lockdown.** Your foot must not slide inside the shoe when you plant.

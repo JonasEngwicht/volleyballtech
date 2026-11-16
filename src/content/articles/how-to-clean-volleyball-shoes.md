@@ -15,7 +15,7 @@ If your shoes have started to slide, do not replace them yet. Most of the time t
 - Wiping your soles with your hand works in a pinch, which is why you see players do it between rallies.
 - Some gyms have sticky mats at the court entrance. Use them.
 
-## Proper cleaning at home
+## How to clean volleyball shoes at home
 
 1. **Knock off loose dirt.** Bang the soles together outside.
 2. **Scrub the outsole.** Use an old toothbrush, warm water and a drop of dish soap. Work the dust out of the grooves.
@@ -32,7 +32,7 @@ Clean the soles every week or two if you play regularly, and more often in dusty
 - **No harsh cleaners or solvents.** They can damage the rubber.
 - **No sticky sprays unless your league allows them.** Some leave residue on the floor.
 
-## Keep them grippy for longer
+## How to keep volleyball shoes grippy
 
 - **Wear them only indoors.** This is the big one. Change into them at the gym.
 - **Carry them in a bag,** not on your feet from the car.

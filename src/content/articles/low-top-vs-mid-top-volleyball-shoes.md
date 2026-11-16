@@ -15,7 +15,7 @@ A mid-top collar wraps around the ankle bones. That gives a more secure, locked-
 
 What it does not do is stop your ankle from rolling. A soft fabric collar is not strong enough to resist the force of landing on someone's foot. Players who want real protection against sprains use ankle braces, which are built for that job.
 
-## Low-tops
+## Low-top volleyball shoes
 
 **Pros**
 
@@ -30,7 +30,7 @@ What it does not do is stop your ankle from rolling. A soft fabric collar is not
 
 **Good for:** setters, liberos, players who wear braces, anyone who values speed.
 
-## Mid-tops
+## Mid-top volleyball shoes
 
 **Pros**
 

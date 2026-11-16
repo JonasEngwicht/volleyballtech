@@ -8,7 +8,7 @@ published: 2026-11-16
 
 Volleyball looks chaotic until you know who is supposed to do what. Each team has six players on the court, and at higher levels each one has a specialized job. This guide explains the positions in plain English.
 
-## The positions at a glance
+## Volleyball positions at a glance
 
 | Position | Main job | Key skills |
 | --- | --- | --- |
@@ -63,6 +63,6 @@ Once the ball is served, players can move to their specialized spots. That is wh
 
 All of them. New players, and especially kids, learn the most by rotating through every spot. Specializing comes later, once you know what you enjoy and what you are good at.
 
-## Gear by position
+## Volleyball gear by position
 
 If you are picking shoes for a specific role, our [best volleyball shoes](/best/best-volleyball-shoes/) list is sorted by position. For protection, see [how to choose knee pads](/guides/how-to-choose-volleyball-knee-pads/).

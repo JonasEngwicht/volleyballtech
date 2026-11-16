@@ -17,10 +17,10 @@ const products = await getProducts(category.id);
 const articles = (await getArticles()).filter((a) => a.data.category === category.id);
 ---
 
-<Base title={category.name} description={category.blurb}>
+<Base title={category.seoTitle} description={category.intro.split('. ').slice(0, 2).join('. ') + '.'}>
   <PageHead
     title={category.name}
-    lead={category.blurb}
+    lead={category.intro}
     crumbs={[
       { href: '/gear/', label: 'Gear' },
       { href: `/gear/${category.id}/`, label: category.name },
@@ -28,7 +28,7 @@ const articles = (await getArticles()).filter((a) => a.data.category === categor
   />
   <section class="section">
     <div class="container">
-      <h2>Products</h2>
+      <h2>{category.name === 'Volleyball Shoes' ? 'Volleyball shoes we cover' : `${category.name} we cover`}</h2>
       {
         products.length > 0 ? (
           <div class="grid">
@@ -55,7 +55,7 @@ const articles = (await getArticles()).filter((a) => a.data.category === categor
     articles.length > 0 && (
       <section class="section section-alt">
         <div class="container">
-          <h2>Guides for {category.name.toLowerCase()}</h2>
+          <h2>{category.name} guides and comparisons</h2>
           <div class="grid">
             {articles.map((a) => (
               <ArticleCard article={a} />
