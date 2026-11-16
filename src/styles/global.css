@@ -4,6 +4,7 @@
   --blue: #1f5fbf;
   --blue-soft: #e8f0fd;
   --accent: #ffc627;
+  --sky: #5bbcf2;
   --accent-dark: #e5ab00;
   --bg: #f6f7fb;
   --surface: #ffffff;
@@ -115,7 +116,7 @@ h4 {
 }
 
 .logo-text span {
-  color: var(--accent);
+  color: var(--sky);
 }
 
 .main-nav ul {
