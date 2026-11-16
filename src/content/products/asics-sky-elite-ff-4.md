@@ -2,6 +2,7 @@
 name: "ASICS Sky Elite FF 4"
 brand: "ASICS"
 category: shoes
+amazonQuery: "ASICS Sky Elite FF 4 volleyball shoes"
 summary: "ASICS' jump-focused flagship, relaunched in June 2026 with softer, bouncier FF BLAST MAX cushioning. Sold as a low-top and as a mid-top (MT)."
 bestFor: ["Outside hitters", "Opposites", "Middle blockers", "Players who jump a lot"]
 level: [intermediate, advanced]

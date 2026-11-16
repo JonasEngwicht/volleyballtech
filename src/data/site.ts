@@ -6,6 +6,12 @@ export const site = {
     'Clear comparisons, real specs and practical training tips for volleyball players — from your first pair of court shoes to jump trackers and ball machines.',
 };
 
+export const amazonTag = 'volleyballtec-20';
+
+/** Amazon search link carrying our Associates tag. */
+export const amazonSearchUrl = (query: string) =>
+  `https://www.amazon.com/s?k=${encodeURIComponent(query)}&tag=${amazonTag}`;
+
 export const nav = [
   { href: '/gear/', label: 'Gear' },
   { href: '/best/', label: 'Best Picks' },

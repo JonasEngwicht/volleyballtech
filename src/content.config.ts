@@ -27,6 +27,9 @@ const products = defineCollection({
     category: z.enum(categoryIds),
     summary: z.string(),
     affiliateUrl: z.string().url().optional(),
+    // Search phrase for the Amazon button. Defaults to the product name. Set amazon: false to hide the button.
+    amazonQuery: z.string().optional(),
+    amazon: z.boolean().default(true),
     retailer: z.string().optional(),
     priceRange: z.enum(['$', '$$', '$$$']).optional(),
     bestFor: z.array(z.string()).default([]),

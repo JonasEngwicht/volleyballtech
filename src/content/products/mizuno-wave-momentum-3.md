@@ -2,6 +2,7 @@
 name: "Mizuno Wave Momentum 3"
 brand: "Mizuno"
 category: shoes
+amazonQuery: "Mizuno Wave Momentum 3 volleyball shoes"
 summary: "Mizuno's popular all-position volleyball shoe, with ENERZY foam cushioning and a Wave plate in the heel for stable landings."
 priceRange: "$$"
 bestFor: ["All positions", "Club players", "Players wanting cushioning and stability"]

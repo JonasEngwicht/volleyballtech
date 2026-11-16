@@ -2,6 +2,7 @@
 name: "ASICS Gel-Rocket 12"
 brand: "ASICS"
 category: shoes
+amazonQuery: "ASICS Gel-Rocket 12 volleyball shoes"
 summary: "A long-running, affordable all-around court shoe with GEL cushioning. A sensible first real volleyball shoe."
 priceRange: "$"
 bestFor: ["Beginners", "School and rec players", "All positions"]

@@ -2,6 +2,7 @@
 name: "adidas Crazyflight 7"
 brand: "adidas"
 category: shoes
+amazonQuery: "adidas Crazyflight 7 volleyball shoes"
 summary: "adidas' redesigned volleyball flagship with a full-length Lightstrike Pro midsole. Available as a light low-top and a more supportive mid-top."
 priceRange: "$$"
 bestFor: ["All positions", "Hitters (mid version)", "Players who like a light shoe"]

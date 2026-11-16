@@ -2,6 +2,7 @@
 name: "ASICS Netburner Ballistic FF 4"
 brand: "ASICS"
 category: shoes
+amazonQuery: "ASICS Netburner Ballistic FF 4 volleyball shoes"
 summary: "A light, flexible ASICS court shoe built for speed and quick direction changes rather than maximum jump cushioning."
 priceRange: "$$"
 bestFor: ["Setters", "Liberos", "Defensive specialists"]

@@ -2,6 +2,7 @@
 name: "Nike HyperSet 2"
 brand: "Nike"
 category: shoes
+amazonQuery: "Nike HyperSet 2 volleyball shoes"
 summary: "Nike's top volleyball shoe, with a forefoot Air Zoom unit and a strap-and-Flywire lockdown system. Popular with hitters."
 priceRange: "$$"
 bestFor: ["Outside hitters", "Opposites", "Middle blockers"]

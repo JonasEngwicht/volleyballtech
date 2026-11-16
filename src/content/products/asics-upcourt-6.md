@@ -2,6 +2,7 @@
 name: "ASICS Upcourt 6"
 brand: "ASICS"
 category: shoes
+amazonQuery: "ASICS Upcourt 6 volleyball shoes"
 summary: "ASICS' entry-level indoor shoe: light, flexible and inexpensive, with basic cushioning. Also made in kids' sizes."
 priceRange: "$"
 bestFor: ["First-time players", "Kids and teens", "Occasional play"]

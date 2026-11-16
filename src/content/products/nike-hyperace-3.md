@@ -2,6 +2,7 @@
 name: "Nike HyperAce 3"
 brand: "Nike"
 category: shoes
+amazonQuery: "Nike HyperAce 3 volleyball shoes"
 summary: "Nike's all-around volleyball shoe: a low, quick design with Air Zoom cushioning, sold in unisex sizing."
 priceRange: "$$"
 bestFor: ["All positions", "Defensive players", "Club and school players"]

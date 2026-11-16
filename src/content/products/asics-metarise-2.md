@@ -2,6 +2,7 @@
 name: "ASICS Metarise 2"
 brand: "ASICS"
 category: shoes
+amazonQuery: "ASICS Metarise 2 volleyball shoes"
 summary: "ASICS' most specialized jumping shoe, with a carbon-fiber-reinforced plate and a strongly curved toe. Designed for outside and opposite hitters."
 priceRange: "$$$"
 bestFor: ["Outside hitters", "Opposites", "Advanced players"]

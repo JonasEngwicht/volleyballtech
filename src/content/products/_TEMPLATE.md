@@ -4,8 +4,9 @@ name: "Brand Model"
 brand: "Brand"
 category: shoes # shoes | knee-pads | ankle-braces | balls | training-equipment | tech
 summary: "One sentence on what this product is and who it is for."
-affiliateUrl: "https://example.com/"
-retailer: "Amazon"
+# Amazon button is added automatically (search for the product name).
+# amazonQuery: "custom search phrase"   # optional
+# amazon: false                          # hide the button
 priceRange: "$$" # $ | $$ | $$$
 bestFor: ["Outside hitters", "Beginners"]
 level: [beginner, intermediate]
