@@ -2,7 +2,8 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import PageHead from '../../components/PageHead.astro';
-import { categories, skillLabels } from '../../data/site';
+import { site, categories, skillLabels } from '../../data/site';
+import { drillUrl, getArticles, getDrills, articleUrl } from '../../lib/content';
 
 export async function getStaticPaths() {
   const drills = await getCollection('drills', ({ data }) => !data.draft);
@@ -13,9 +14,52 @@ const { entry } = Astro.props;
 const d = entry.data;
 const { Content } = await render(entry);
 const equipment = d.equipment.map((id) => categories.find((c) => c.id === id)).filter((c) => c !== undefined);
+const url = new URL(drillUrl(entry), site.url).href;
+
+// Skill guide that explains the technique behind each drill type.
+const skillGuide: Record<string, string> = {
+  serving: 'how-to-serve-a-volleyball',
+  passing: 'how-to-pass-a-volleyball',
+  defense: 'how-to-pass-a-volleyball',
+  setting: 'how-to-set-a-volleyball',
+  attacking: 'how-to-spike-a-volleyball',
+  footwork: 'how-to-spike-a-volleyball',
+  jumping: 'how-to-jump-higher-for-volleyball',
+  blocking: 'how-to-block-in-volleyball',
+};
+const guide = (await getArticles()).find((a) => a.id === skillGuide[d.skill]);
+
+const allDrills = (await getDrills()).filter((x) => x.id !== entry.id);
+const moreDrills = [
+  ...allDrills.filter((x) => x.data.skill === d.skill),
+  ...allDrills.filter((x) => x.data.skill !== d.skill),
+].slice(0, 3);
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: d.title,
+    description: d.description,
+    datePublished: d.published.toISOString(),
+    dateModified: d.published.toISOString(),
+    mainEntityOfPage: url,
+    author: { '@type': 'Organization', name: site.name, url: site.url },
+    publisher: { '@type': 'Organization', name: site.name, url: site.url },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.url + '/' },
+      { '@type': 'ListItem', position: 2, name: 'Drills', item: `${site.url}/drills/` },
+      { '@type': 'ListItem', position: 3, name: d.title, item: url },
+    ],
+  },
+];
 ---
 
-<Base title={d.title} description={d.description} type="article">
+<Base title={d.title} description={d.description} type="article" jsonLd={jsonLd}>
   <PageHead title={d.title} lead={d.description} crumbs={[{ href: '/drills/', label: 'Drills' }]}>
     <ul class="facts">
       <li><strong>Skill:</strong> {skillLabels[d.skill]}</li>
@@ -28,6 +72,13 @@ const equipment = d.equipment.map((id) => categories.find((c) => c.id === id)).f
     <div class="container">
       <article class="prose">
         <Content />
+        {
+          guide && (
+            <p class="notice">
+              Want the technique behind this drill? Read <a href={articleUrl(guide)}>{guide.data.title}</a>.
+            </p>
+          )
+        }
         {
           equipment.length > 0 && (
             <>
@@ -45,4 +96,28 @@ const equipment = d.equipment.map((id) => categories.find((c) => c.id === id)).f
       </article>
     </div>
   </section>
+  {
+    moreDrills.length > 0 && (
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>More volleyball drills</h2>
+            <a class="btn btn-outline" href="/drills/">All drills</a>
+          </div>
+          <div class="grid">
+            {moreDrills.map((x) => (
+              <a class="card" href={drillUrl(x)}>
+                <span class="badge">{skillLabels[x.data.skill]}</span>
+                <h3>{x.data.title}</h3>
+                <p>{x.data.description}</p>
+                <p class="meta">
+                  {x.data.level} · {x.data.players} · {x.data.duration}
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
 </Base>

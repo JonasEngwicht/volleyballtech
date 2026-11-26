@@ -4,22 +4,44 @@ import ArticleCard from '../components/ArticleCard.astro';
 import { site, categories, skillLabels } from '../data/site';
 import { getArticles, getDrills, drillUrl } from '../lib/content';
 
-const latest = (await getArticles()).slice(0, 6);
+const latest = (await getArticles()).filter((a) => a.data.section !== 'learn').slice(0, 6);
 const drills = (await getDrills()).slice(0, 3);
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: site.name,
-  url: site.url,
-  description: site.description,
-};
+const learnSlugs = [
+  'volleyball-rules',
+  'volleyball-court-dimensions',
+  'volleyball-net-height',
+  'volleyball-rotation',
+  'how-to-serve-a-volleyball',
+  'how-to-spike-a-volleyball',
+];
+const learnAll = await getArticles('learn');
+const learn = learnSlugs
+  .map((id) => learnAll.find((a) => a.id === id))
+  .filter((a) => a !== undefined);
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: site.name,
+    url: site.url,
+    description: site.description,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: site.name,
+    url: site.url,
+    logo: `${site.url}/logo-512.png`,
+  },
+];
 ---
 
 <Base title={site.name} description={site.description} jsonLd={jsonLd}>
   <section class="hero">
     <div class="container">
-      <p class="eyebrow">Volleyball gear · Volleyball tech · Training</p>
+      <p class="eyebrow">Volleyball gear · Volleyball tech · Rules & training</p>
       <h1>Volleyball gear and tech, explained.</h1>
       <p class="hero-lead">
         Clear comparisons, real specs and training tips for volleyball players — from your first pair of volleyball
@@ -50,7 +72,28 @@ const jsonLd = {
     </div>
   </section>
 
-  <section class="section section-alt">
+  {
+    learn.length > 0 && (
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>New to volleyball? Learn the game</h2>
+              <p class="section-lead">Volleyball rules, court size, net height, rotations and the four core skills, explained in plain English.</p>
+            </div>
+            <a class="btn btn-outline" href="/learn/">All basics</a>
+          </div>
+          <div class="grid">
+            {learn.map((a) => (
+              <ArticleCard article={a} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section">
     <div class="container">
       <div class="section-head">
         <div>
@@ -75,7 +118,7 @@ const jsonLd = {
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section-alt">
     <div class="container">
       <div class="section-head">
         <div>
@@ -104,7 +147,7 @@ const jsonLd = {
     </div>
   </section>
 
-  <section class="section section-alt">
+  <section class="section">
     <div class="container">
       <h2>How we review volleyball gear</h2>
       <p class="section-lead">Most volleyball gear advice online is either written for pros or copied from a press release. We do it differently.</p>
@@ -129,7 +172,7 @@ const jsonLd = {
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section-alt">
     <div class="container">
       <div class="cta-band">
         <div>

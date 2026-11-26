@@ -45,4 +45,4 @@ A regulation net turns a backyard or park into a court. It is for fun and genera
 
 ## What to skip
 
-Gadgets that promise a higher jump. Training and rest do that. See [how to jump higher for volleyball](/guides/how-to-jump-higher-for-volleyball/). For the full list, browse the [training equipment category](/gear/training-equipment/).
+Gadgets that promise a higher jump. Training and rest do that. See [how to jump higher for volleyball](/guides/how-to-jump-higher-for-volleyball/). For the full list, browse the [training equipment category](/gear/training-equipment/). To get more out of any training aid, pair it with a drill from our [volleyball drill library](/drills/) and the technique guides for [setting](/learn/how-to-set-a-volleyball/) and [passing](/learn/how-to-pass-a-volleyball/).

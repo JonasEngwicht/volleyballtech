@@ -27,7 +27,7 @@ Technique is the cheapest height you will ever gain.
 - **Make the last two steps fast.** A long, low step followed by a quick close turns forward speed into lift.
 - **Jump up, not forward.** Drifting into the net wastes height.
 
-Our [four-step approach drill](/drills/approach-footwork/) covers this step by step.
+Our [four-step approach drill](/drills/approach-footwork/) covers this step by step, and [how to spike a volleyball](/learn/how-to-spike-a-volleyball/) puts approach, jump and arm swing together.
 
 ## 2. Build strength
 

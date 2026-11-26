@@ -15,6 +15,7 @@ export const amazonSearchUrl = (query: string) =>
 
 export const nav = [
   { href: '/gear/', label: 'Gear' },
+  { href: '/learn/', label: 'Learn' },
   { href: '/best/', label: 'Best Picks' },
   { href: '/compare/', label: 'Compare' },
   { href: '/guides/', label: 'Guides' },
@@ -24,6 +25,15 @@ export const nav = [
 
 /** Article sections. Each one gets its own URL prefix, e.g. /guides/<slug>/ */
 export const sections = [
+  {
+    id: 'learn',
+    label: 'Learn',
+    title: 'Learn Volleyball',
+    h1: 'Learn Volleyball: Rules, Skills and Basics',
+    seoTitle: 'Learn Volleyball: Rules, Court, Rotations & Skills',
+    description:
+      'Volleyball rules, court dimensions, net height, rotations and step-by-step skill guides for serving, passing, setting and spiking. Written in plain English for new players, parents and coaches.',
+  },
   {
     id: 'guides',
     label: 'Guide',
@@ -50,7 +60,7 @@ export const sections = [
   },
 ] as const;
 
-export const sectionIds = ['guides', 'best', 'compare'] as const;
+export const sectionIds = ['learn', 'guides', 'best', 'compare'] as const;
 
 /** Gear categories. Products and drills reference these ids. */
 export const categoryIds = [
