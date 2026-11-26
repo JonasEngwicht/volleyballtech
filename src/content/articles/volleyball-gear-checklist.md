@@ -65,6 +65,6 @@ Beach volleyball needs even less: a beach ball, sunglasses, sunscreen and, on ho
 5. Hair ties if you need them
 6. A small towel
 
-Ask your coach or league before buying anything team-specific. Many clubs provide jerseys and balls.
+Not sure what to put on? Read [what to wear for volleyball practice and tryouts](/guides/what-to-wear-for-volleyball/). Ask your coach or league before buying anything team-specific. Many clubs provide jerseys and balls.
 
 Browse the full [volleyball gear directory](/gear/) for everything we cover.

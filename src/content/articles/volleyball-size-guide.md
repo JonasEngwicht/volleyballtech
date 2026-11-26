@@ -34,6 +34,8 @@ Using an indoor ball outside ruins it quickly. Sand, moisture and rough ground d
 - **12 and up:** A regular official-size indoor ball. In the United States, check which ball your club or school league uses.
 - **Adults:** A regular official-size ball for indoor or beach.
 
+Youth teams also play with a lower net. See our [volleyball net height chart](/learn/volleyball-net-height/) for every age group.
+
 ## Leather or synthetic?
 
 - **Synthetic (composite) leather:** The standard today for most training and match balls. Durable and consistent.

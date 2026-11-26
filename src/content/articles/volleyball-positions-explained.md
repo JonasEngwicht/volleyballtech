@@ -59,6 +59,8 @@ Each time your team wins the serve back, all six players rotate one spot clockwi
 
 Once the ball is served, players can move to their specialized spots. That is why you see everyone switch places right after the serve.
 
+Our [volleyball rotation guide](/learn/volleyball-rotation/) shows the six zones, the overlap rule and the 5-1 and 6-2 systems with a diagram.
+
 ## Which position should a beginner play?
 
 All of them. New players, and especially kids, learn the most by rotating through every spot. Specializing comes later, once you know what you enjoy and what you are good at.

@@ -5,11 +5,12 @@ import { skillLabels } from '../../data/site';
 import { getDrills, drillUrl } from '../../lib/content';
 
 const drills = await getDrills();
-const description = 'Volleyball drills for solo, partner and team practice — each one with clear steps and the equipment you need.';
+const description =
+  'Free volleyball drills for beginners and up: solo drills you can do at home, partner drills and team drills. Each one has a diagram, clear steps and the equipment you need.';
 ---
 
-<Base title="Volleyball Drills for Solo, Partner & Team Practice" description={description}>
-  <PageHead title="Volleyball Drill Library" lead={description} crumbs={[{ href: '/drills/', label: 'Drills' }]} />
+<Base title="Volleyball Drills for Beginners: Solo, Partner & Team" description={description}>
+  <PageHead title="Volleyball Drills" lead={description} crumbs={[{ href: '/drills/', label: 'Drills' }]} />
   <section class="section">
     <div class="container">
       {
