@@ -8,9 +8,11 @@ Built with [Astro](https://astro.build), deployed to Cloudflare Workers (static 
 
 | What | Folder | URL |
 | --- | --- | --- |
-| Articles (guides, best picks, comparisons) | `src/content/articles/` | `/<section>/<file-name>/` |
+| Articles (learn, guides, best picks, comparisons) | `src/content/articles/` | `/<section>/<file-name>/` |
 | Products | `src/content/products/` | `/gear/<category>/<file-name>/` |
 | Drills | `src/content/drills/` | `/drills/<file-name>/` |
+
+Sections: `learn` (rules and skills), `guides`, `best`, `compare`. Diagrams live in `public/diagrams/`.
 
 Files starting with `_` are ignored. Set `draft: true` to hide an entry.
 
