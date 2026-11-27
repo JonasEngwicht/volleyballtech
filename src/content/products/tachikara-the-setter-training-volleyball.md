@@ -20,7 +20,14 @@ cons:
   - "Not for spiking or serving"
   - "Too much use can tire or strain the hands: keep sessions short"
   - "Not for young beginners: ask a coach first"
-updated: 2026-11-16
+verdict: "A weighted, full-size ball for building setting strength. Use it for short blocks of repetitions, then switch back to a normal ball."
+faq:
+  - q: "How heavy is Tachikara's The Setter ball?"
+    a: "The listing gives 15.7 to 17.5 oz, roughly 75% heavier than a standard volleyball. It is regulation size 5."
+  - q: "Can you play a game with a weighted volleyball?"
+    a: "No. It is a training ball for setting repetitions. Do not serve, spike or pass it hard."
+alternatives: ["tandem-set-rite-setting-trainer", "tandem-pass-rite", "apex-volleyball-rebounder-net"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

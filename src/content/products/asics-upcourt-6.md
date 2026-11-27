@@ -22,7 +22,14 @@ cons:
   - "Basic cushioning with no gel or advanced foam"
   - "Some buyers report it fits long and narrow – check the size chart"
   - "Not built for frequent, hard training"
-updated: 2026-11-16
+verdict: "The cheapest ASICS court shoe, and enough for a first season, PE class or a weekly rec league. Players who practise more often should spend a little more on the Gel-Rocket 12."
+faq:
+  - q: "Is the ASICS Upcourt 6 a volleyball shoe?"
+    a: "It is ASICS' entry-level indoor court shoe, with a non-marking rubber outsole. It is sold for volleyball and other indoor sports."
+  - q: "Is there a kids' version of the Upcourt 6?"
+    a: "Yes. The Upcourt 6 GS (grade school) is the kids' version. It listed at about $60 in November 2026."
+alternatives: ["adidas-ligra-8", "asics-gel-rocket-12", "asics-gel-tactic-12"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

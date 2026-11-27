@@ -5,6 +5,7 @@ section: best
 category: knee-pads
 tags: [knee pads, best picks, protection]
 published: 2026-11-16
+updated: 2026-11-28
 ---
 
 Good volleyball knee pads keep you from thinking about the floor. That makes you more willing to dive for a ball. Below are three pads we recommend, and who each one suits.
@@ -40,6 +41,12 @@ The foam is split into sections that wrap around the knee, so the sides of the j
 ## ASICS Gel-Rally Youth: a first pad for kids
 
 Youth sizing keeps the pad where it belongs on a small leg, and the GEL cushioning softens knee-first landings. Check the size chart and re-measure each season.
+
+## More volleyball knee pads worth a look
+
+- **[Nike Streak](/gear/knee-pads/nike-streak-knee-pads/):** contoured EVA foam and Dri-FIT fabric for about $30. It runs small, so check the size chart.
+- **[Mizuno T10 Plus](/gear/knee-pads/mizuno-t10-plus-knee-pads/):** a slim pad with a longer sleeve than the LR6, in one adult size and one youth size.
+- **[McDavid HEX](/gear/knee-pads/mcdavid-hex-knee-pads/):** a thin compression sleeve with 9 mm of flexible padding, for players who find normal pads bulky.
 
 ## How to choose
 

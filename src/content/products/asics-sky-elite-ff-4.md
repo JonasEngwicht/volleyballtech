@@ -21,7 +21,16 @@ cons:
   - "Priced at the top of the ASICS range"
   - "New model, so long-term durability feedback is still thin"
   - "More shoe than a once-a-week player needs"
-updated: 2026-11-16
+verdict: "ASICS' main jump shoe and our first suggestion for hitters and middles who want soft landings. It is new and it is expensive, so casual players can skip it."
+faq:
+  - q: "When did the ASICS Sky Elite FF 4 come out?"
+    a: "ASICS launched the Sky Elite FF 4 in June 2026."
+  - q: "What is new in the Sky Elite FF 4?"
+    a: "The main change is the midsole: FF BLAST MAX foam, which ASICS describes as softer and bouncier. The shoe keeps a RISETRUSS structure under the midfoot for stability."
+  - q: "Should I buy the low-top or the MT?"
+    a: "Choose the low-top if you want free ankle movement or wear ankle braces. Choose the Sky Elite FF MT 4 if you like a higher collar."
+alternatives: ["asics-metarise-2", "mizuno-wave-momentum-3", "nike-hyperset-2", "mizuno-wave-lightning-z8"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

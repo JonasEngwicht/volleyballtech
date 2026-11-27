@@ -22,7 +22,14 @@ cons:
   - "A high price for backyard play"
   - "Not meant for indoor courts"
   - "The bold graphics are not to everyone's taste"
-updated: 2026-11-16
+verdict: "The official ball of the AVP tour, and the one to train with if your beach events use it. A professional ball at a professional price."
+faq:
+  - q: "Is the Wilson OPTX the official AVP ball?"
+    a: "Yes. It is the official game ball of the AVP beach tour."
+  - q: "What is Optic Flow?"
+    a: "Wilson's name for the high-contrast graphics on the ball. They are designed to make the spin of the ball easier to see."
+alternatives: ["mikasa-bv550c-beach-pro", "wilson-soft-play-volleyball", "mikasa-v200w"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

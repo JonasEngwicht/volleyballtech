@@ -21,7 +21,14 @@ cons:
   - "Made for recreational use, not for high-level matches"
   - "Steel poles are heavier than aluminum"
   - "Needs stakes and open space"
-updated: 2026-11-16
+verdict: "A regulation-size portable net set for the backyard, park or beach, with boundary lines in the bag. A sensible middle ground between toy sets and tournament systems."
+faq:
+  - q: "Is the Park & Sun Spiker Sport net regulation size?"
+    a: "Yes. The net is 32 ft long and 3 ft tall, and the boundary lines mark out a 30 x 60 ft court."
+  - q: "What comes with the Spiker Sport net set?"
+    a: "The net, 1.5-inch steel poles, pre-measured boundary lines, stakes and a carry bag."
+alternatives: ["apex-volleyball-rebounder-net", "tandem-volleyball-pal", "tandem-pass-rite"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

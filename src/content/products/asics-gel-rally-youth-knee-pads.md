@@ -21,7 +21,14 @@ pros:
 cons:
   - "Youth sizing only: older players need the adult version"
   - "Kids grow quickly, so check the fit each season"
-updated: 2026-11-16
+verdict: "A simple, inexpensive first knee pad in real youth sizing. It suits kids and young teens in their first school or club seasons; bigger teens should move to an adult pad."
+faq:
+  - q: "What age are the ASICS Gel-Rally youth knee pads for?"
+    a: "They are made in youth sizing for children and young teens. There is no fixed age limit, so go by the ASICS size chart and your child's knee measurement."
+  - q: "Are the ASICS Gel-Rally knee pads good for beginners?"
+    a: "Yes. They are cheap, they use ASICS GEL cushioning and they have a ventilated design, which is all a new player needs."
+alternatives: ["mizuno-t10-plus-knee-pads", "nike-streak-knee-pads", "mizuno-lr6-knee-pads"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

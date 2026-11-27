@@ -24,7 +24,16 @@ cons:
   - "Several buyers say it is hard to put on at first"
   - "Bulkier, so check that your shoes still fit"
   - "You need to buy a left and a right for both ankles"
-updated: 2026-11-16
+verdict: "A strong-support brace for ankles that have been sprained badly or that give way often. It comes in left and right versions and costs more than a lace-up."
+faq:
+  - q: "Does the Zamst A2-DX come in left and right versions?"
+    a: "Yes. There are separate left and right models, in sizes from small to extra large."
+  - q: "How heavy is the Zamst A2-DX?"
+    a: "About 5.4 oz per brace, according to the Amazon listing."
+  - q: "Who is the Zamst A2-DX for?"
+    a: "Players with chronic ankle instability or a history of bad sprains who still need to move quickly. Ask a doctor or athletic trainer whether it suits your injury."
+alternatives: ["active-ankle-eclipse-ii", "ultra-zoom-ankle-brace", "active-ankle-t2", "aso-ankle-stabilizer"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

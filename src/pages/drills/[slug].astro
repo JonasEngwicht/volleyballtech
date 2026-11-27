@@ -3,7 +3,8 @@ import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import PageHead from '../../components/PageHead.astro';
 import { site, categories, skillLabels } from '../../data/site';
-import { drillUrl, getArticles, getDrills, articleUrl } from '../../lib/content';
+import GearMentions from '../../components/GearMentions.astro';
+import { drillUrl, getArticles, getDrills, getProducts, byFeatured, articleUrl } from '../../lib/content';
 
 export async function getStaticPaths() {
   const drills = await getCollection('drills', ({ data }) => !data.draft);
@@ -15,6 +16,9 @@ const d = entry.data;
 const { Content } = await render(entry);
 const equipment = d.equipment.map((id) => categories.find((c) => c.id === id)).filter((c) => c !== undefined);
 const url = new URL(drillUrl(entry), site.url).href;
+// One suggested product per equipment category, featured products first.
+const allProducts = byFeatured(await getProducts());
+const gear = d.equipment.map((id) => allProducts.find((p) => p.data.category === id)).filter((p) => p !== undefined);
 
 // Skill guide that explains the technique behind each drill type.
 const skillGuide: Record<string, string> = {
@@ -83,13 +87,18 @@ const jsonLd = [
           equipment.length > 0 && (
             <>
               <h2>Gear for this drill</h2>
-              <ul>
-                {equipment.map((c) => (
-                  <li>
-                    <a href={`/gear/${c.id}/`}>{c.name}</a>
-                  </li>
+              <p>
+                You need:{' '}
+                {equipment.map((c, i) => (
+                  <>
+                    {i > 0 && ', '}
+                    <a href={`/gear/${c.id}/`}>{c.name.toLowerCase()}</a>
+                  </>
                 ))}
-              </ul>
+                . If you still need to buy something, these are good places to start:
+              </p>
+              <GearMentions products={gear} />
+              <p class="small-print">Amazon links are affiliate links. <a href="/affiliate-disclosure/">Learn more</a></p>
             </>
           )
         }

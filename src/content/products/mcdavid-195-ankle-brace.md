@@ -23,7 +23,16 @@ cons:
   - "Takes a few tries to lace and strap correctly"
   - "The extra volume can make tight shoes feel snug: try a shoe half a size up if needed"
   - "Less rigid than a brace with plastic stays"
-updated: 2026-11-16
+verdict: "A light, affordable lace-up that most players can wear in their normal shoes. A good first brace for prevention; players with unstable ankles should look at stronger designs."
+faq:
+  - q: "What are the figure-6 straps on the McDavid 195?"
+    a: "Straps that wrap under and around the ankle in the pattern of athletic tape. They add side-to-side support on top of the laces."
+  - q: "Does the McDavid 195 fit either foot?"
+    a: "Yes. One brace fits the left or the right foot."
+  - q: "Can you tighten the McDavid 195 during a match?"
+    a: "Yes. The straps can be tightened without taking the brace off."
+alternatives: ["aso-ankle-stabilizer", "active-ankle-t2", "ultra-zoom-ankle-brace", "zamst-a2-dx-ankle-brace"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

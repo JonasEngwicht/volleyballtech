@@ -24,7 +24,16 @@ cons:
   - "Not the lightest shoe in its class"
   - "Sizing feedback is mixed – some find it roomy"
   - "Newer Mizuno models are now arriving"
-updated: 2026-11-16
+verdict: "Mizuno's all-position workhorse: ENERZY foam, a Wave plate in the heel and a snug bootie upper. A strong choice if you want one stable shoe for a full club season."
+faq:
+  - q: "What positions is the Mizuno Wave Momentum 3 for?"
+    a: "All of them. It is Mizuno's all-position shoe, with cushioning and a Wave plate in the heel for stable landings."
+  - q: "How much does the Wave Momentum 3 weigh?"
+    a: "Road Runner Sports lists the women's shoe at about 11.9 oz, with a heel drop of 12 mm."
+  - q: "What is the difference between the Wave Momentum 3 and the Wave Lightning Z8?"
+    a: "The Wave Momentum 3 is the heavier, more stable shoe. The Wave Lightning Z8 is Mizuno's light speed shoe, at about 295 g."
+alternatives: ["mizuno-wave-lightning-z8", "mizuno-wave-luminous-3", "mizuno-wave-dimension", "asics-sky-elite-ff-4"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

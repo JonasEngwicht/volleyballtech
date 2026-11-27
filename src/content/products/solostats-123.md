@@ -22,7 +22,16 @@ cons:
   - "iOS app: check the app store for other platforms"
   - "Only as good as the data entered"
   - "Takes practice to keep up with fast rallies"
-updated: 2026-11-16
+verdict: "The easiest way to start keeping real match stats: it is free, and one person can record a whole match with it. The listing we checked is for iPhone and iPad."
+faq:
+  - q: "Is SoloStats 123 free?"
+    a: "The app is free to download and offers in-app purchases."
+  - q: "Can SoloStats 123 export stats?"
+    a: "Yes. According to the developer it exports to MaxPreps, Hudl and Excel."
+  - q: "Does SoloStats 123 work on Android?"
+    a: "The listing we checked is on the App Store, for iPhone and iPad. Check the developer's site for other platforms."
+alternatives: ["xbotgo-chameleon", "veo-cam-3", "vert-jump-monitor", "pocket-radar-ball-coach"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

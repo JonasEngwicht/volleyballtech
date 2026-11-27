@@ -2,8 +2,11 @@
 import Base from '../../../layouts/Base.astro';
 import PageHead from '../../../components/PageHead.astro';
 import ArticleCard from '../../../components/ArticleCard.astro';
-import { categories } from '../../../data/site';
-import { getProducts, getArticles, productUrl } from '../../../lib/content';
+import ProductCard from '../../../components/ProductCard.astro';
+import AmazonButton from '../../../components/AmazonButton.astro';
+import Faq from '../../../components/Faq.astro';
+import { site, categories } from '../../../data/site';
+import { getProducts, getArticles, productUrl, levelLabel, metaDescription } from '../../../lib/content';
 
 export function getStaticPaths() {
   return categories.map((category) => ({
@@ -13,34 +16,74 @@ export function getStaticPaths() {
 }
 
 const { category } = Astro.props;
-const sentence = (t: string) => t.charAt(0).toUpperCase() + t.slice(1).toLowerCase();
+const sentence = (t: string) => t.charAt(0).toUpperCase() + t.slice(1);
 const products = await getProducts(category.id);
 const articles = (await getArticles()).filter((a) => a.data.category === category.id);
+const url = `${site.url}/gear/${category.id}/`;
+const description = metaDescription(category.intro);
+
+const jsonLd: Record<string, unknown>[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: category.seoTitle,
+    description,
+    url,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: products.length,
+      itemListElement: products.map((p, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: p.data.name,
+        url: new URL(productUrl(p), site.url).href,
+      })),
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.url + '/' },
+      { '@type': 'ListItem', position: 2, name: 'Gear', item: `${site.url}/gear/` },
+      { '@type': 'ListItem', position: 3, name: category.name, item: url },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: category.faq.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  },
+];
 ---
 
-<Base title={category.seoTitle} description={category.intro.split('. ').slice(0, 2).join('. ') + '.'}>
+<Base title={category.seoTitle} description={description} jsonLd={jsonLd}>
   <PageHead
     title={category.name}
     lead={category.intro}
-    crumbs={[
-      { href: '/gear/', label: 'Gear' },
-      { href: `/gear/${category.id}/`, label: category.name },
-    ]}
-  />
+    crumbs={[{ href: '/gear/', label: 'Gear' }]}
+  >
+    <p class="meta page-meta">
+      {products.length} products · {articles.length} guides and comparisons ·{' '}
+      <a href={category.guide.href}>{category.guide.label}</a>
+    </p>
+  </PageHead>
+
   <section class="section">
     <div class="container">
-      <h2>{`${sentence(category.name)} we cover`}</h2>
+      <h2>{sentence(category.noun)} we cover</h2>
+      <p class="section-lead">
+        Every product has its own page with specs, pros and cons, sizing notes and a clear word on who should skip it.
+      </p>
       {
         products.length > 0 ? (
-          <div class="grid">
+          <div class="grid grid-products">
             {products.map((p) => (
-              <a class="card" href={productUrl(p)}>
-                <span class="badge">{p.data.brand}</span>
-                {p.data.testedHandsOn && <span class="badge badge-accent">Hands-on</span>}
-                <h3>{p.data.name}</h3>
-                <p>{p.data.summary}</p>
-                {p.data.priceRange && <p class="meta">Price range: {p.data.priceRange}</p>}
-              </a>
+              <ProductCard product={p} />
             ))}
           </div>
         ) : (
@@ -52,11 +95,79 @@ const articles = (await getArticles()).filter((a) => a.data.category === categor
       }
     </div>
   </section>
+
+  {
+    products.length > 1 && (
+      <section class="section section-alt">
+        <div class="container">
+          <h2>Compare all {category.noun} at a glance</h2>
+          <p class="section-lead">The short version of every product page, side by side.</p>
+          <div class="table-wrap">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th scope="col">Product</th>
+                  <th scope="col">Best for</th>
+                  <th scope="col">Level</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Shop</th>
+                </tr>
+              </thead>
+              <tbody>
+                {products.map((p) => (
+                  <tr>
+                    <th scope="row">
+                      <a href={productUrl(p)}>{p.data.name}</a>
+                    </th>
+                    <td>{p.data.bestFor.slice(0, 2).join(', ')}</td>
+                    <td>{levelLabel(p.data.level)}</td>
+                    <td>{p.data.priceRange ?? '–'}</td>
+                    <td>
+                      <AmazonButton product={p} small label="Amazon" />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p class="small-print">
+            {
+              category.id === 'shoes'
+                ? 'Price range for shoes: $ under $100 · $$ $100–$160 · $$$ over $160 (list prices).'
+                : 'Price range: $ budget · $$ mid-range · $$$ premium, compared within this category.'
+            }
+            {' '}Amazon links are affiliate links.
+          </p>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section">
+    <div class="container">
+      <h2>How to choose {category.noun}</h2>
+      <p class="section-lead">Three things to check before you buy.</p>
+      <div class="principles">
+        {
+          category.checklist.map((item) => (
+            <div class="principle">
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </div>
+          ))
+        }
+      </div>
+      <p class="after-principles">
+        <a class="btn btn-outline" href={category.guide.href}>{category.guide.label}</a>
+      </p>
+    </div>
+  </section>
+
   {
     articles.length > 0 && (
       <section class="section section-alt">
         <div class="container">
-          <h2>{sentence(category.name)} guides and comparisons</h2>
+          <h2>{sentence(category.noun)}: guides and comparisons</h2>
           <div class="grid">
             {articles.map((a) => (
               <ArticleCard article={a} />
@@ -66,4 +177,13 @@ const articles = (await getArticles()).filter((a) => a.data.category === categor
       </section>
     )
   }
+
+  <section class="section">
+    <div class="container">
+      <div class="prose">
+        <h2>{sentence(category.noun)}: common questions</h2>
+        <Faq items={category.faq} />
+      </div>
+    </div>
+  </section>
 </Base>

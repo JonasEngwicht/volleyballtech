@@ -21,7 +21,14 @@ cons:
   - "Expensive, and the subscription is the larger long-term cost"
   - "Veo's marketing focuses on soccer; a volleyball court is far smaller, so a high fixed phone camera may be enough"
   - "Not needed for individual players"
-updated: 2026-11-16
+verdict: "A dedicated tracking camera for teams that film every match and have the budget for hardware plus a yearly subscription. Families and small clubs should look at cheaper options first."
+faq:
+  - q: "Does the Veo Cam 3 need a subscription?"
+    a: "Yes. You buy the camera and pay for an annual subscription. Check veo.com for the current plans."
+  - q: "Is the Veo Cam 3 good for volleyball?"
+    a: "Veo is best known in soccer, and some teams use it for indoor sports. It records the whole playing area and creates a tracked view afterward."
+alternatives: ["xbotgo-chameleon", "solostats-123", "vert-jump-monitor"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

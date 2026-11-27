@@ -22,7 +22,14 @@ cons:
   - "Not a wide shoe"
   - "Reviewers say the outsole picks up dust and needs wiping"
   - "Thin tread – keep it strictly indoors"
-updated: 2026-11-16
+verdict: "Nike's top volleyball shoe, built around a forefoot Air Zoom unit and a strap that locks the foot down. Popular with hitters who like a firm, held-in feel."
+faq:
+  - q: "What is the strap on the Nike HyperSet 2 for?"
+    a: "The laces run through a strap on the outer side of the shoe. Together with Flywire cables, it pulls the upper tight around the midfoot."
+  - q: "How much does the Nike HyperSet 2 cost?"
+    a: "About $135 to $155 at list price, depending on the edition (November 2026)."
+alternatives: ["nike-hyperace-3", "asics-sky-elite-ff-4", "adidas-crazyflight-7", "asics-metarise-2"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

@@ -5,6 +5,7 @@ section: best
 category: ankle-braces
 tags: [ankle braces, best picks, injury prevention]
 published: 2026-11-16
+updated: 2026-11-28
 ---
 
 The best volleyball ankle brace is the one you will wear every time. Here are three that players commonly choose, and who each one fits.
@@ -36,6 +37,14 @@ A long-standing trainer favorite with figure-eight straps and a ballistic nylon 
 ## Zamst A2-DX
 
 The most rigid of the three. The plastic guards limit rolling, which suits players with repeated sprains. It costs more, is bulkier and takes practice to put on.
+
+## Hinged braces: Active Ankle and Ultra Zoom
+
+The braces above are two lace-ups and one rigid-guard brace. Many volleyball players prefer a hinged brace, which has stiff sides but lets the ankle bend freely up and down:
+
+- **[Active Ankle T2](/gear/ankle-braces/active-ankle-t2/):** the rigid, hinged brace you see in most gyms. Quick to put on, and usually about $35 to $45 each.
+- **[Active Ankle Eclipse II](/gear/ankle-braces/active-ankle-eclipse-ii/):** the same maker's maximum-protection model, for net players and for ankles with a history of sprains.
+- **[Ultra Zoom](/gear/ankle-braces/ultra-zoom-ankle-brace/):** a hinged brace with a flexible shell that molds to your ankle. More comfortable than hard plastic, and more expensive.
 
 ## How to choose
 

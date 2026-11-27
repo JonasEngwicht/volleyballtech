@@ -1,26 +1,78 @@
 ---
 import Base from '../../layouts/Base.astro';
 import PageHead from '../../components/PageHead.astro';
-import { categories } from '../../data/site';
-import { getProducts } from '../../lib/content';
+import Icon from '../../components/Icon.astro';
+import { site, categories } from '../../data/site';
+import { getProducts, productUrl } from '../../lib/content';
 
 const products = await getProducts();
-const count = (id: string) => products.filter((p) => p.data.category === id).length;
-const description = 'The VolleyballTech volleyball gear directory: volleyball shoes, knee pads, balls, training equipment and volleyball tech, organized by position, level and budget.';
+const inCategory = (id: string) => products.filter((p) => p.data.category === id);
+const description =
+  'The VolleyballTech volleyball gear directory: volleyball shoes, knee pads, ankle braces, balls, training equipment and volleyball tech, each with specs, pros and cons.';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Volleyball Gear Directory',
+    description,
+    url: `${site.url}/gear/`,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site.url + '/' },
+      { '@type': 'ListItem', position: 2, name: 'Gear', item: `${site.url}/gear/` },
+    ],
+  },
+];
 ---
 
-<Base title="Volleyball Gear Directory: Shoes, Knee Pads, Balls & Tech" description={description}>
-  <PageHead title="Volleyball Gear Directory" lead={description} crumbs={[{ href: '/gear/', label: 'Gear' }]} />
+<Base title="Volleyball Gear Directory: Shoes, Pads, Balls & Tech" description={description} jsonLd={jsonLd}>
+  <PageHead title="Volleyball Gear Directory" lead={description}>
+    <p class="meta page-meta">{products.length} products in {categories.length} categories</p>
+  </PageHead>
   <section class="section">
     <div class="container">
+      <h2>Volleyball gear by category</h2>
       <div class="grid">
         {
           categories.map((c) => (
-            <a class="card" href={`/gear/${c.id}/`}>
-              <span class="badge badge-accent">{count(c.id) > 0 ? `${count(c.id)} products` : 'Coming soon'}</span>
+            <a class="card cat-card" href={`/gear/${c.id}/`}>
+              <span class="cat-icon">
+                <Icon name={c.id} size={28} />
+              </span>
+              <span class="badge badge-accent">
+                {inCategory(c.id).length > 0 ? `${inCategory(c.id).length} products` : 'Coming soon'}
+              </span>
               <h3>{c.name}</h3>
               <p>{c.blurb}</p>
             </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <section class="section section-alt">
+    <div class="container">
+      <h2>All volleyball gear, A to Z</h2>
+      <p class="section-lead">Every product page on VolleyballTech, sorted by category.</p>
+      <div class="directory">
+        {
+          categories.map((c) => (
+            <div class="directory-group">
+              <h3>
+                <a href={`/gear/${c.id}/`}>{c.name}</a>
+              </h3>
+              <ul>
+                {inCategory(c.id).map((p) => (
+                  <li>
+                    <a href={productUrl(p)}>{p.data.name}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))
         }
       </div>

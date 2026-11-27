@@ -5,6 +5,7 @@ section: best
 category: balls
 tags: [balls, best picks, indoor, beach]
 published: 2026-11-16
+updated: 2026-11-28
 ---
 
 Choosing the best volleyball depends on where you play. Here are three balls the pros and clubs use, and who should buy each.
@@ -36,6 +37,12 @@ A competition ball with a hexagonal surface pattern meant to steady its flight. 
 ## Wilson AVP OPTX
 
 A sewn beach ball with high-contrast graphics that make spin easy to read. It is designed for sand, not for gyms.
+
+## More volleyballs worth a look
+
+- **[Mikasa BV550C Beach Pro](/gear/balls/mikasa-bv550c-beach-pro/):** the official FIVB beach ball, used at the Paris 2024 Olympics.
+- **[Tachikara SV-5WSC](/gear/balls/tachikara-sv5wsc/):** a soft, NFHS-approved indoor ball in team colors, popular with high schools.
+- **[Wilson Soft Play](/gear/balls/wilson-soft-play-volleyball/):** a cheap, soft recreational ball in official size, for the backyard and the beach.
 
 ## Do you need a pro ball?
 
