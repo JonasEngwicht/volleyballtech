@@ -5,6 +5,7 @@ section: best
 category: tech
 tags: [tech, best picks, jump trackers, stats apps]
 published: 2026-11-16
+updated: 2026-11-28
 ---
 
 Volleyball tech measures and records your game. It does not train you, but the right tool can show you what to work on. Here are three we think are worth a look.
@@ -36,6 +37,11 @@ A free app that lets one person record a match. Start with serves and passes, th
 ## Veo Cam 3
 
 Records the whole court and builds a tracked view. It is pricey, and a phone on a tripod gives you much of the benefit.
+
+## More volleyball tech worth a look
+
+- **[XbotGo Chameleon](/gear/tech/xbotgo-chameleon/):** a motorized mount that turns your phone into an auto-tracking camera, with no subscription. The budget alternative to a dedicated camera.
+- **[Pocket Radar Ball Coach](/gear/tech/pocket-radar-ball-coach/):** a pocket radar gun that shows serve and spike speed, for players and coaches who train with numbers.
 
 ## Start with your phone
 

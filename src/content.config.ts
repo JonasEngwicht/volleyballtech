@@ -37,6 +37,12 @@ const products = defineCollection({
     specs: z.record(z.string(), z.string()).default({}),
     pros: z.array(z.string()).default([]),
     cons: z.array(z.string()).default([]),
+    // One or two sentences: the bottom line, shown in the "Quick take" box.
+    verdict: z.string().optional(),
+    // Questions and answers shown at the end of the page (and as FAQ structured data).
+    faq: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
+    // File names (without .md) of products to compare against.
+    alternatives: z.array(z.string()).default([]),
     testedHandsOn: z.boolean().default(false),
     updated: z.coerce.date().optional(),
     draft: z.boolean().default(false),

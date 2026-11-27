@@ -20,7 +20,14 @@ pros:
 cons:
   - "Unisex sizing takes some care when ordering"
   - "Less cushioning tech than the HyperSet 2"
-updated: 2026-11-16
+verdict: "Nike's all-round volleyball shoe: low, quick and cushioned with Air Zoom. Check the unisex sizing carefully before you order."
+faq:
+  - q: "How does Nike HyperAce 3 sizing work?"
+    a: "The shoe is sold in unisex sizing and is labeled with both a men's and a women's size. Make sure you know which number you are ordering."
+  - q: "What is the difference between the Nike HyperAce 3 and the HyperSet 2?"
+    a: "The HyperAce 3 is the all-round model at about $125. The HyperSet 2 is Nike's top volleyball shoe, with a forefoot Air Zoom unit and a strap-and-Flywire lockdown system, at about $135 to $155."
+alternatives: ["nike-hyperset-2", "mizuno-wave-luminous-3", "asics-netburner-ballistic-ff-4", "mizuno-wave-momentum-3"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

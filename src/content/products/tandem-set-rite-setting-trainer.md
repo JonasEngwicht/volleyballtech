@@ -20,7 +20,14 @@ cons:
   - "A small tool: it will not fix footwork or set placement"
   - "Some buyers say it is large for small hands"
   - "Only needed until the habit sticks"
-updated: 2026-11-16
+verdict: "A small, cheap tool that fixes one habit: palming the ball when you set. It is useful for beginners until clean finger contact becomes automatic."
+faq:
+  - q: "How does the Tandem Set Rite work?"
+    a: "Adjustable straps hold a plastic knob against each palm. If the ball touches your palm, you feel the knob at once, so you learn to contact the ball with your fingers."
+  - q: "Is the Set Rite sold as a pair?"
+    a: "Yes, it is sold as one pair, one trainer for each hand."
+alternatives: ["tandem-pass-rite", "tachikara-the-setter-training-volleyball", "tandem-volleyball-pal"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

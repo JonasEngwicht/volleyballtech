@@ -22,7 +22,16 @@ cons:
   - "Rebound is less predictable than a wall"
   - "Takes some effort to assemble"
   - "Wind can move it outdoors unless you stake it down"
-updated: 2026-11-16
+verdict: "A rebounder is one of the most useful things you can buy for practising alone, because it sends passes, sets and hits back at an angle you choose. This 7 x 4 ft model folds flat and comes with a travel bag."
+faq:
+  - q: "What can you practise with a volleyball rebounder?"
+    a: "Passing, setting and hitting, all without a partner. Change the angle of the net to send the ball back higher or flatter."
+  - q: "Do I need a rebounder if I have a wall?"
+    a: "A wall is free and works for many drills. A rebounder returns the ball in a softer arc that is closer to a real pass or set, and you can put it in a yard where there is no wall."
+  - q: "How big is the APEX rebounder net?"
+    a: "The net is 7 x 4 ft on an aluminum frame. It folds flat and comes with a travel bag."
+alternatives: ["tandem-volleyball-pal", "tandem-pass-rite", "park-sun-spiker-sport-net", "tandem-set-rite-setting-trainer"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

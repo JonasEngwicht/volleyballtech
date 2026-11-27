@@ -15,6 +15,14 @@ specs:
   Outsole: ""
 pros: []
 cons: []
+# Bottom line in one or two sentences. Shown in the "Quick take" box.
+verdict: ""
+# Questions and answers. Shown at the end of the page and sent to Google as FAQ data.
+faq:
+  - q: "Question?"
+    a: "Answer in plain text (no links)."
+# File names (without .md) of products to compare against. Leave empty to compare with the whole category.
+alternatives: []
 testedHandsOn: false
 updated: 2026-11-16
 draft: true

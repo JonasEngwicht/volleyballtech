@@ -1,0 +1,29 @@
+---
+import Icon from './Icon.astro';
+import AmazonButton from './AmazonButton.astro';
+import type { Product } from '../lib/content';
+import { productUrl } from '../lib/content';
+
+interface Props {
+  products: Product[];
+}
+
+const { products } = Astro.props;
+---
+
+<ul class="mention-list">
+  {
+    products.map((product) => (
+      <li>
+        <span class="mention-icon">
+          <Icon name={product.data.category} size={22} />
+        </span>
+        <span class="mention-text">
+          <a href={productUrl(product)}>{product.data.name}</a>
+          <span>{product.data.bestFor.slice(0, 2).join(' · ')}</span>
+        </span>
+        <AmazonButton product={product} small />
+      </li>
+    ))
+  }
+</ul>

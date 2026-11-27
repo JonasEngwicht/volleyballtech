@@ -23,7 +23,16 @@ cons:
   - "Thin padding: heavy divers may want something thicker"
   - "Short sleeve gives less grip on the leg than longer pads; some buyers say theirs slide"
   - "Sizes run by knee circumference, so measure first"
-updated: 2026-11-16
+verdict: "The safe default among volleyball knee pads: slim, cheap and sold in real sizes. Players who dive on almost every rally may want more foam."
+faq:
+  - q: "How long is the Mizuno LR6 knee pad?"
+    a: "The sleeve is 6 inches long, which is short for a volleyball knee pad. The pad is a low-rise, no-fold design."
+  - q: "What size Mizuno LR6 should I buy?"
+    a: "Mizuno sizes the LR6 by the measurement around your knee: S for under about 13.5 inches, M for about 13.5 to 14.5 inches and L for over about 15 inches."
+  - q: "What is the difference between the Mizuno LR6 and the T10 Plus?"
+    a: "The LR6 has a short 6-inch sleeve and three sizes. The T10 Plus has a longer sleeve and comes in one adult size and one youth size."
+alternatives: ["mizuno-t10-plus-knee-pads", "nike-streak-knee-pads", "mizuno-team-knee-pads", "mcdavid-hex-knee-pads"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

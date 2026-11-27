@@ -20,7 +20,14 @@ cons:
   - "Heights are estimates, and numbers from different devices are not comparable"
   - "A hardware purchase plus optional subscriptions"
   - "Most useful for players who jump a lot, not beginners"
-updated: 2026-11-16
+verdict: "The best-known jump tracker in volleyball. Its real value is counting jumps to manage workload; treat the height numbers as estimates."
+faq:
+  - q: "How accurate is the VERT jump monitor?"
+    a: "Jump height is an estimate, and numbers from different devices cannot be compared. The device is most useful for following your own trend over weeks and months."
+  - q: "Where do you wear the VERT sensor?"
+    a: "It clips to your waistband and sends its data to a phone app."
+alternatives: ["pocket-radar-ball-coach", "xbotgo-chameleon", "solostats-123"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

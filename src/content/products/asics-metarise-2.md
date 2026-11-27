@@ -22,7 +22,16 @@ cons:
   - "One of the most expensive volleyball shoes you can buy"
   - "Built for a specific approach-jump style, not all-around play"
   - "Sold in men's sizing, so women need to convert sizes"
-updated: 2026-11-16
+verdict: "The Metarise 2 is a specialist tool for strong outside and opposite hitters: a plated, curved shoe built around the approach jump, at the highest price in the ASICS range. Most players are better served by the Sky Elite FF 4."
+faq:
+  - q: "Does the ASICS Metarise 2 have a carbon plate?"
+    a: "It has a plate made of carbon-fiber-reinforced plastic, combined with FF BLAST PLUS ECO foam and a strongly curved toe."
+  - q: "Who should buy the ASICS Metarise 2?"
+    a: "Advanced outside and opposite hitters with a fast, powerful approach. It is not a shoe for beginners or for back-row specialists."
+  - q: "What is the difference between the Metarise 2 and the Sky Elite FF 4?"
+    a: "The Sky Elite FF 4 is the softer, more versatile jump shoe. The Metarise 2 adds a plate and a high-curve toe for hitters, and it costs more."
+alternatives: ["asics-sky-elite-ff-4", "nike-hyperset-2", "adidas-crazyflight-7", "mizuno-wave-lightning-z8"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

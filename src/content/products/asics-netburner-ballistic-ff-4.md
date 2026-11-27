@@ -22,7 +22,16 @@ pros:
 cons:
   - "Less landing cushioning than jump-focused shoes"
   - "High heel drop is not for everyone"
-updated: 2026-11-16
+verdict: "A light, flexible speed shoe for setters, liberos and quick defenders. If your game is more about the first step than about jump height, this is the ASICS to look at."
+faq:
+  - q: "Is the ASICS Netburner Ballistic FF 4 good for hitters?"
+    a: "It can work for lighter hitters, but it is built for speed and quick direction changes, not for maximum jump cushioning. ASICS' jump shoes are the Sky Elite FF 4 and the Metarise 2."
+  - q: "What is the heel drop of the Netburner Ballistic FF 4?"
+    a: "ASICS lists a heel drop of 15 mm."
+  - q: "Is there a mid-top Netburner Ballistic FF 4?"
+    a: "Yes, it is sold as the Netburner Ballistic FF MT 4. In November 2026 it listed at about $155, against about $135 for the low-top."
+alternatives: ["mizuno-wave-lightning-z8", "asics-sky-elite-ff-4", "nike-hyperace-3", "asics-gel-tactic-12"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

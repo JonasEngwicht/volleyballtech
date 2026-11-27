@@ -23,7 +23,16 @@ cons:
   - "A premium price for a ball that wears out like any other"
   - "Indoor only"
   - "Not needed for casual play"
-updated: 2026-11-16
+verdict: "A trusted FIVB-approved match ball with Molten's FLISTATEC surface. Buy it if your club, league or tournament plays with Molten."
+faq:
+  - q: "What is FLISTATEC?"
+    a: "Molten's name for the hexagonal pattern on the surface of the ball. It is designed to steady the ball's flight."
+  - q: "Is the Molten V5M5000 an approved match ball?"
+    a: "Yes. It is FIVB approved, and Molten lists it as the official ball of NORCECA."
+  - q: "How much does the Molten V5M5000 cost?"
+    a: "Molten USA listed it at about $90 in November 2026."
+alternatives: ["mikasa-v200w", "tachikara-sv5wsc", "wilson-soft-play-volleyball"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

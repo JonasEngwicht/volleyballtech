@@ -10,6 +10,7 @@ export const GET: APIRoute = async () => {
     { path: '/gear/' },
     { path: '/drills/' },
     { path: '/about/' },
+    { path: '/how-we-research/' },
     { path: '/community/' },
     { path: '/affiliate-disclosure/' },
     ...sections.map((s) => ({ path: `/${s.id}/` })),

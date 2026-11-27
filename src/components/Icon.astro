@@ -1,0 +1,57 @@
+---
+interface Props {
+  name: string;
+  size?: number;
+  class?: string;
+}
+
+const { name, size = 24, class: className } = Astro.props;
+
+// 24 x 24 line icons. Category ids double as icon names.
+const icons: Record<string, string> = {
+  "balls":
+    "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12.00 12.00A9.00 9.00 0 0 1 19.77 16.46\"/><path d=\"M17.08 19.42A12.23 12.23 0 0 1 9.8 14.55\"/><path d=\"M12.24 20.98A15.46 15.46 0 0 1 6.94 16.08\"/><path d=\"M12.00 12.00A9.00 9.00 0 0 1 4.25 16.5\"/><path d=\"M3.04 12.69A12.23 12.23 0 0 1 10.89 8.82\"/><path d=\"M4.1 7.72A15.46 15.46 0 0 1 10.99 5.58\"/><path d=\"M12.00 12.00A9.00 9.00 0 0 1 12.00 3.00\"/><path d=\"M15.89 3.9A12.23 12.23 0 0 1 15.31 12.63\"/><path d=\"M19.66 7.3A15.46 15.46 0 0 1 18.06 14.33\"/>",
+  "shoes":
+    "<path d=\"M2.5 17.5v-6.2c0-.6.5-1 1-.8l2.2.9c.9.4 1.9 0 2.4-.8l.7-1.2c.3-.5.9-.6 1.4-.3l6 4.1c.6.4 1.3.7 2 .8l1.4.3c1.1.2 1.9 1.2 1.9 2.3v.9\"/><path d=\"M2.5 17.5h19v1a1 1 0 0 1-1 1h-17a1 1 0 0 1-1-1z\"/><path d=\"M11.4 10.6l-1.2 1.7M13.7 12.2l-1.2 1.7\"/>",
+  "knee-pads":
+    "<path d=\"M8 2.5h8l.8 6.2c.2 1.5.2 3 0 4.5L16 21.5H8l-.8-8.3c-.2-1.5-.2-3 0-4.5z\"/><rect x=\"9\" y=\"7.5\" width=\"6\" height=\"8\" rx=\"3\"/><path d=\"M12 10v3\"/>",
+  "ankle-braces":
+    "<path d=\"M9 2.5h6v8.5l4.3 3.4c.8.6 1.2 1.5 1.2 2.5v2.6a1 1 0 0 1-1 1H7.5a1 1 0 0 1-1-1v-4.5c0-.7.2-1.3.7-1.8L9 11z\"/><path d=\"M9 6.5h6M7.2 14.2l8.3-3.2M10.5 20.9l6.3-7.9\"/>",
+  "training-equipment":
+    "<path d=\"M4 4v16.5M20 4v16.5M4 6.5h16M4 12.5h16M9.3 6.5v6M14.7 6.5v6M4 9.5h16M2.5 20.5h3M18.5 20.5h3\"/>",
+  "tech":
+    "<rect x=\"3\" y=\"4.5\" width=\"18\" height=\"15\" rx=\"3\"/><path d=\"M6.5 12.5h2.3l1.7-4 2.6 7.5 1.9-4.5h2.5\"/>",
+  "check":
+    "<path d=\"M5 12.5l4.5 4.5L19 7.5\"/>",
+  "x":
+    "<path d=\"M6.5 6.5l11 11M17.5 6.5l-11 11\"/>",
+  "arrow":
+    "<path d=\"M5 12h14M13 6l6 6-6 6\"/>",
+  "external":
+    "<path d=\"M14 5h5v5M19 5l-8.5 8.5M11 6H6.5A1.5 1.5 0 0 0 5 7.5v10A1.5 1.5 0 0 0 6.5 19h10a1.5 1.5 0 0 0 1.5-1.5V13\"/>",
+  "guide":
+    "<path d=\"M5 4.5A1.5 1.5 0 0 1 6.5 3H18a1 1 0 0 1 1 1v15.5H6.8A1.8 1.8 0 0 1 5 17.7zM5 17.7A1.8 1.8 0 0 1 6.8 16H19M9 7.5h6M9 11h4\"/>",
+  "drill":
+    "<circle cx=\"12\" cy=\"12\" r=\"8.5\"/><circle cx=\"12\" cy=\"12\" r=\"4.5\"/><circle cx=\"12\" cy=\"12\" r=\".8\" fill=\"currentColor\"/>",
+  "compare":
+    "<path d=\"M12 4v16.5M5 8h14M5 8l-2.5 6a3 3 0 0 0 5 0zM19 8l-2.5 6a3 3 0 0 0 5 0zM8.5 20.5h7\"/>",
+  "star":
+    "<path d=\"M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z\"/>",
+  "learn":
+    "<path d=\"M3 9l9-4.5L21 9l-9 4.5zM7 11.2v4.3c0 1.1 2.2 2.5 5 2.5s5-1.4 5-2.5v-4.3M21 9v5.5\"/>",
+};
+---
+
+<svg
+  class={className}
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.75"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  set:html={icons[name] ?? ''}
+/>

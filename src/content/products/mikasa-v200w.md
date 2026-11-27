@@ -22,7 +22,16 @@ cons:
   - "Much more expensive than recreational balls"
   - "Indoor only: sand and rough surfaces ruin the cover"
   - "Overkill for casual or backyard play"
-updated: 2026-11-16
+verdict: "The international indoor match ball. It is worth the money if your club or league plays with Mikasa or under FIVB rules, and too much ball for casual play."
+faq:
+  - q: "Is the Mikasa V200W an official match ball?"
+    a: "Yes. It is the official FIVB indoor ball and was the match ball of the Tokyo 2020 Olympics."
+  - q: "How many panels does the Mikasa V200W have?"
+    a: "Eighteen. The microfiber cover has a double-dimpled surface for grip."
+  - q: "Can I use the Mikasa V200W outdoors?"
+    a: "No. It is an indoor ball, and sand or rough ground will ruin the cover. Use a beach ball outside."
+alternatives: ["molten-v5m5000", "tachikara-sv5wsc", "mikasa-bv550c-beach-pro", "wilson-soft-play-volleyball"]
+updated: 2026-11-28
 ---
 
 ## Who it is for

@@ -5,6 +5,7 @@ section: best
 category: shoes
 tags: [shoes, beginners, best picks]
 published: 2026-11-16
+updated: 2026-11-28
 ---
 
 Your first volleyball shoes have one job: let you move and land safely on an indoor floor while you learn the game. You do not need carbon plates or the newest foam for that.
@@ -37,6 +38,12 @@ It is the pick for teens and adults who expect to play at least weekly.
 The Upcourt 6 is simpler: mesh upper, basic foam, rubber outsole. It is fine for PE, a first rec season or a child who may move on to another sport next year. The kids' version is called Upcourt 6 GS.
 
 If you can afford the Gel-Rocket, we think the extra cushioning and support are worth about $15. See the full [comparison](/compare/asics-gel-rocket-12-vs-upcourt-6/).
+
+## adidas Ligra 8: another budget option
+
+The [adidas Ligra 8](/gear/shoes/adidas-ligra-8/) is adidas' answer to the Upcourt: a simple indoor court shoe for about $70, with a reinforced toe and a regular, forgiving fit. adidas also sells it in kids' sizes for about $60. Choose between the Ligra and the Upcourt by fit.
+
+If you want a little more support without paying flagship prices, look at the [ASICS Gel-Tactic 12](/gear/shoes/asics-gel-tactic-12/) (list price $100, often discounted) or the [Mizuno Wave Dimension](/gear/shoes/mizuno-wave-dimension/).
 
 ## When it makes sense to spend more
 

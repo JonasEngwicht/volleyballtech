@@ -5,6 +5,7 @@ section: best
 category: shoes
 tags: [shoes, jumping, hitters, best picks]
 published: 2026-11-16
+updated: 2026-11-28
 ---
 
 Let's be honest first: no shoe will make you jump much higher. Your vertical comes from strength, technique and practice. What a good jump shoe does is help you plant hard without sliding, return a little energy and soften hundreds of landings.
@@ -47,6 +48,10 @@ Lighter than most cushioned flagships in its low version. Choose the mid if you 
 ## Mizuno Wave Momentum 3
 
 Less of a pure jump shoe, more of a cushioned all-rounder. A good choice if you hit in the front row and pass in the back.
+
+## Mizuno Wave Lightning Z8
+
+The [Wave Lightning Z8](/gear/shoes/mizuno-wave-lightning-z8/) is the light option: about 295 g, with ENERZY NXT foam under the forefoot. Mizuno recommends it for wing spikers who want cushioning without weight. Heavier jumpers get more protection from the shoes above.
 
 ## What will actually raise your jump
 

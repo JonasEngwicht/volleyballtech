@@ -5,6 +5,7 @@ section: best
 category: shoes
 tags: [shoes, best picks]
 published: 2026-11-16
+updated: 2026-11-28
 ---
 
 There is no single best volleyball shoe. A middle blocker and a libero need different things, and a beginner needs something else again. So instead of a ranking, this list sorts current shoes by who they suit.
@@ -64,6 +65,16 @@ The seventh Crazyflight is a full redesign with a full-length Lightstrike Pro mi
 The [HyperSet 2](/gear/shoes/nike-hyperset-2/) is the hitter's shoe: an Air Zoom unit under the forefoot and a strap that locks the midfoot down. Independent reviewers rate its grip and lockdown highly, but describe the fit as on the narrow side.
 
 The [HyperAce 3](/gear/shoes/nike-hyperace-3/) is the lighter, cheaper all-rounder, sold in unisex sizing.
+
+## More volleyball shoes worth a look
+
+These models did not get their own heading above, but each one fills a gap:
+
+- **[Mizuno Wave Lightning Z8](/gear/shoes/mizuno-wave-lightning-z8/):** Mizuno's light speed shoe at about 295 g, for quick outside hitters and setters.
+- **[Mizuno Wave Luminous 3](/gear/shoes/mizuno-wave-luminous-3/):** a comfortable all-rounder with ENERZY NXT foam and a soft woven upper.
+- **[Mizuno Wave Dimension](/gear/shoes/mizuno-wave-dimension/):** a stable, mid-priced shoe for club and school players.
+- **[ASICS Gel-Tactic 12](/gear/shoes/asics-gel-tactic-12/):** one step above the Gel-Rocket, with more support for side-to-side moves.
+- **[adidas Ligra 8](/gear/shoes/adidas-ligra-8/):** a $70 starter shoe that also comes in kids' sizes.
 
 ## How to choose the right volleyball shoes
 

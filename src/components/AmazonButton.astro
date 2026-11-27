@@ -1,0 +1,32 @@
+---
+import Icon from './Icon.astro';
+import type { Product } from '../lib/content';
+import { productBuyUrl, productBuyLabel } from '../lib/content';
+
+interface Props {
+  product: Product;
+  small?: boolean;
+  block?: boolean;
+  label?: string;
+}
+
+const { product, small = false, block = false, label } = Astro.props;
+const url = productBuyUrl(product);
+const text = label ?? productBuyLabel(product);
+const classes = ['btn', 'btn-primary', 'btn-buy', small ? 'btn-small' : '', block ? 'btn-block' : ''].filter(Boolean).join(' ');
+---
+
+{
+  url && (
+    <a
+      class={classes}
+      href={url}
+      rel="sponsored nofollow noopener"
+      target="_blank"
+      aria-label={`${text}: ${product.data.name} (opens in a new tab)`}
+    >
+      <span>{text}</span>
+      <Icon name="external" size={small ? 15 : 17} />
+    </a>
+  )
+}

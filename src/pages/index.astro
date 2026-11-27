@@ -1,11 +1,18 @@
 ---
 import Base from '../layouts/Base.astro';
 import ArticleCard from '../components/ArticleCard.astro';
-import { site, categories, skillLabels } from '../data/site';
-import { getArticles, getDrills, drillUrl } from '../lib/content';
+import ProductCard from '../components/ProductCard.astro';
+import Icon from '../components/Icon.astro';
+import { site, categories, skillLabels, featuredProducts } from '../data/site';
+import { getArticles, getDrills, getProducts, drillUrl } from '../lib/content';
 
-const latest = (await getArticles()).filter((a) => a.data.section !== 'learn').slice(0, 6);
-const drills = (await getDrills()).slice(0, 3);
+const allArticles = await getArticles();
+const latest = allArticles.filter((a) => a.data.section !== 'learn').slice(0, 6);
+const allDrills = await getDrills();
+const drills = allDrills.slice(0, 3);
+const products = await getProducts();
+const featured = featuredProducts.map((id) => products.find((p) => p.id === id)).filter((p) => p !== undefined);
+const count = (id: string) => products.filter((p) => p.data.category === id).length;
 
 const learnSlugs = [
   'volleyball-rules',
@@ -27,6 +34,7 @@ const jsonLd = [
     name: site.name,
     url: site.url,
     description: site.description,
+    publisher: { '@type': 'Organization', name: site.name, url: site.url },
   },
   {
     '@context': 'https://schema.org',
@@ -40,16 +48,37 @@ const jsonLd = [
 
 <Base title={site.name} description={site.description} jsonLd={jsonLd}>
   <section class="hero">
-    <div class="container">
-      <p class="eyebrow">Volleyball gear · Volleyball tech · Rules & training</p>
-      <h1>Volleyball gear and tech, explained.</h1>
-      <p class="hero-lead">
-        Clear comparisons, real specs and training tips for volleyball players — from your first pair of volleyball
-        shoes to jump trackers, ball machines and other volleyball tech.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="/gear/">Browse volleyball gear</a>
-        <a class="btn btn-ghost" href="/guides/">Read the guides</a>
+    <div class="container hero-inner">
+      <div>
+        <p class="eyebrow">Volleyball gear · Volleyball tech · Rules & training</p>
+        <h1>Volleyball gear and tech, explained.</h1>
+        <p class="hero-lead">
+          Clear comparisons, real specs and training tips for volleyball players — from your first pair of volleyball
+          shoes to jump trackers, tracking cameras and other volleyball tech.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/gear/">Browse volleyball gear</a>
+          <a class="btn btn-ghost" href="/best/best-volleyball-shoes/">Best volleyball shoes</a>
+        </div>
+        <ul class="hero-stats">
+          <li><strong>{products.length}</strong> products with full specs</li>
+          <li><strong>{allArticles.length}</strong> guides and comparisons</li>
+          <li><strong>{allDrills.length}</strong> drills with diagrams</li>
+        </ul>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 340" fill="none">
+          <rect x="30" y="60" width="360" height="240" rx="10" stroke="rgba(255,255,255,0.28)" stroke-width="2"></rect>
+          <path d="M210 60v240M150 60v240M270 60v240" stroke="rgba(255,255,255,0.28)" stroke-width="2"></path>
+          <path d="M210 40v280" stroke="#ffc627" stroke-width="4" stroke-linecap="round"></path>
+          <path d="M96 232c40-118 150-150 232-96" stroke="#5bbcf2" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 12"></path>
+          <g transform="translate(70 206)">
+            <circle cx="26" cy="26" r="26" fill="#5bbcf2"></circle>
+            <g stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M26 26a26 26 0 0 1 22.5 13"></path><path d="M26 26a26 26 0 0 1-22.5 13"></path><path d="M26 26a26 26 0 0 1 0-26"></path><path d="M36 2.4a35 35 0 0 1-.4 27.8"></path><path d="M1.5 30.500a35 35 0 0 1 24-13.5"></path><path d="M43.5 45a35 35 0 0 1-23.5-14"></path></g>
+          </g>
+          <circle cx="328" cy="136" r="7" fill="#ffc627"></circle>
+          <circle cx="328" cy="136" r="16" stroke="#ffc627" stroke-opacity="0.5" stroke-width="2"></circle>
+        </svg>
       </div>
     </div>
   </section>
@@ -61,8 +90,11 @@ const jsonLd = [
       <div class="grid">
         {
           categories.map((c) => (
-            <a class="card" href={`/gear/${c.id}/`}>
-              <span class="badge badge-accent">Gear</span>
+            <a class="card cat-card" href={`/gear/${c.id}/`}>
+              <span class="cat-icon">
+                <Icon name={c.id} size={28} />
+              </span>
+              <span class="badge badge-accent">{count(c.id)} products</span>
               <h3>{c.name}</h3>
               <p>{c.blurb}</p>
             </a>
@@ -73,8 +105,29 @@ const jsonLd = [
   </section>
 
   {
-    learn.length > 0 && (
+    featured.length > 0 && (
       <section class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Popular volleyball gear</h2>
+              <p class="section-lead">A starter pick from each category. Every page lists the specs, the drawbacks and who should skip it.</p>
+            </div>
+            <a class="btn btn-outline" href="/gear/">All gear</a>
+          </div>
+          <div class="grid grid-products">
+            {featured.map((p) => (
+              <ProductCard product={p} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    learn.length > 0 && (
+      <section class="section">
         <div class="container">
           <div class="section-head">
             <div>
@@ -93,7 +146,7 @@ const jsonLd = [
     )
   }
 
-  <section class="section">
+  <section class="section section-alt">
     <div class="container">
       <div class="section-head">
         <div>
@@ -118,7 +171,7 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="section section-alt">
+  <section class="section">
     <div class="container">
       <div class="section-head">
         <div>
@@ -147,10 +200,10 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section-alt">
     <div class="container">
-      <h2>How we review volleyball gear</h2>
-      <p class="section-lead">Most volleyball gear advice online is either written for pros or copied from a press release. We do it differently.</p>
+      <h2>How we research volleyball gear</h2>
+      <p class="section-lead">Most volleyball gear advice online is either written for pros or copied from a press release. We do it differently. <a href="/how-we-research/">Read our method</a>.</p>
       <div class="principles">
         <div class="principle">
           <h3>Specs, not hype</h3>
@@ -172,7 +225,7 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="section section-alt">
+  <section class="section">
     <div class="container">
       <div class="cta-band">
         <div>

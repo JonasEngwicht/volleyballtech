@@ -3,8 +3,9 @@ import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import PageHead from '../../components/PageHead.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import GearMentions from '../../components/GearMentions.astro';
 import { site, sections, categories } from '../../data/site';
-import { articleUrl, formatDate, getArticles } from '../../lib/content';
+import { articleUrl, formatDate, getArticles, getProducts, productsInText } from '../../lib/content';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles', ({ data }) => !data.draft);
@@ -21,6 +22,7 @@ const category = entry.data.category ? categories.find((c) => c.id === entry.dat
 const url = new URL(articleUrl(entry), site.url).href;
 const toc = headings.filter((h) => h.depth === 2);
 const modified = entry.data.updated ?? entry.data.published;
+const gear = productsInText(entry.body, await getProducts());
 
 const related = (await getArticles())
   .filter((a) => a.id !== entry.id && (a.data.category === entry.data.category || a.data.section === entry.data.section))
@@ -35,8 +37,9 @@ const jsonLd = [
     datePublished: entry.data.published.toISOString(),
     dateModified: modified.toISOString(),
     mainEntityOfPage: url,
+    image: `${site.url}/og-default.png`,
     author: { '@type': 'Organization', name: site.name, url: site.url },
-    publisher: { '@type': 'Organization', name: site.name, url: site.url },
+    publisher: { '@type': 'Organization', name: site.name, url: site.url, logo: { '@type': 'ImageObject', url: `${site.url}/logo-512.png` } },
   },
   {
     '@context': 'https://schema.org',
@@ -57,7 +60,7 @@ const jsonLd = [
     crumbs={[{ href: `/${section.id}/`, label: section.title }]}
   >
     <p class="meta">
-      By the {site.name} team · Updated <time datetime={modified.toISOString()}>{formatDate(modified)}</time>
+      By the <a href="/about/">{site.name} team</a> · Updated <time datetime={modified.toISOString()}>{formatDate(modified)}</time>
     </p>
   </PageHead>
 
@@ -69,6 +72,16 @@ const jsonLd = [
           <a href="/affiliate-disclosure/">Learn more</a>
         </p>
         <Content />
+        {
+          gear.length > 0 && (
+            <section class="gear-mentioned" aria-labelledby="gear-mentioned">
+              <h2 id="gear-mentioned">Gear mentioned in this article</h2>
+              <p>Open a product for the full specs, or check the current price on Amazon.</p>
+              <GearMentions products={gear} />
+              <p class="small-print">Amazon links are affiliate links. <a href="/affiliate-disclosure/">Learn more</a></p>
+            </section>
+          )
+        }
       </article>
       <aside class="article-aside">
         {

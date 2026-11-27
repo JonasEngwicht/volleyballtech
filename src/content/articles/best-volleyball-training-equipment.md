@@ -5,6 +5,7 @@ section: best
 category: training-equipment
 tags: [training, best picks, solo practice]
 published: 2026-11-16
+updated: 2026-11-28
 ---
 
 You can get a lot better with a ball, a wall and a bit of space. A few pieces of volleyball training equipment help you get more touches. Here are the ones we think are worth considering.
@@ -42,6 +43,13 @@ Straps with a palm knob help you stop palming the ball. A weighted ball builds s
 ## Portable net
 
 A regulation net turns a backyard or park into a court. It is for fun and general practice rather than serious training.
+
+## Solo and passing trainers
+
+Two inexpensive tools from Tandem Sport target one skill each:
+
+- **[Tandem Volleyball Pal](/gear/training-equipment/tandem-volleyball-pal/):** a ball on an elastic cord that comes back after every hit, for practising the serve toss and arm swing alone.
+- **[Tandem Pass Rite](/gear/training-equipment/tandem-pass-rite/):** an elastic band between wrists and ankles that stops you from swinging your arms when you pass.
 
 ## What to skip
 

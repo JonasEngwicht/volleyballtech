@@ -22,7 +22,16 @@ pros:
 cons:
   - "Fewer men's colorways than women's"
   - "Mid version is noticeably heavier"
-updated: 2026-11-16
+verdict: "The Crazyflight 7 is adidas' top volleyball shoe and one of the lighter flagships, with a full-length Lightstrike Pro midsole. Choose the low-top for speed, or the mid-top if you want more structure around the ankle."
+faq:
+  - q: "Does the adidas Crazyflight 7 come in a mid-top?"
+    a: "Yes. adidas sells a low-top and a mid-top. In November 2026 the list prices were about $140 for the low and about $150 for the mid."
+  - q: "What cushioning does the Crazyflight 7 use?"
+    a: "A full-length Lightstrike Pro midsole with an added Lightstrike layer. A 3-in-1 Torsion System under the midfoot adds stability."
+  - q: "How much does the Crazyflight 7 weigh?"
+    a: "adidas and retailer listings give roughly 10 to 10.5 oz for the low-top and about 12.5 oz for the men's mid-top."
+alternatives: ["mizuno-wave-lightning-z8", "asics-sky-elite-ff-4", "nike-hyperset-2", "mizuno-wave-momentum-3"]
+updated: 2026-11-28
 ---
 
 ## Who it is for
